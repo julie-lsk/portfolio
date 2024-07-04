@@ -1,12 +1,14 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import * as THREE from 'three';
-import FOG from 'vanta/dist/vanta.fog.min';
+import {motion} from "framer-motion";
 import '../src/app.scss';
 
-import Accueil from "./pages/accueil/Accueil";
-import Header from "./components/header/Header";
+import * as THREE from 'three';
+import FOG from 'vanta/dist/vanta.fog.min';
+
+/********** Composants **********/
+import Accueil from "./components/accueil/Accueil";
+import Navbar from "./components/navbar/Navbar";
 
 
 /********** Animation Vanta - background **********/
@@ -36,8 +38,8 @@ const VantaAnimation = () => {
         lowlightColor: 0xbeffde,
         baseColor: 0x4b9aac,
 
-        blurFactor: 0.53,
-        zoom: 1,
+        blurFactor: 0.55,
+        zoom: 1.5,
         speed: 1.1,
       }))
     }
@@ -56,20 +58,24 @@ const VantaAnimation = () => {
 function App() 
 {
   return (
-    <Router>
+      <div> 
 
-      <VantaAnimation />
+        <VantaAnimation />
+        
+        <section id='Accueil'>
+          <Navbar />
+          <Accueil />
+        </section>
+        <section id="À propos">Parallax</section>
+        <section>À propos</section>
+        <section id="Portfolio">Parallax</section> {/* TODO: à voir si on garde */}
+        <section>Portfolio1</section>
+        <section>Portfolio2</section>
+        <section>Portfolio3</section>
+        <section id='Contact'>Contact</section>
 
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<Accueil />}></Route>
-      </Routes>
-
-      {/* <Footer /> */}
-
-    </Router>
-  );
+      </div>
+);
 }
 
 export default App;

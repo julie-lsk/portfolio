@@ -1,0 +1,17 @@
+.navbar
+{
+    width: 100%;
+    height: 250px;
+    
+    .logo
+    {
+        position: fixed;
+        background-image: url("../../utils/assets/logo_blanc.webp");
+        background-position: center;
+        background-size: cover;
+        height: 70px;
+        width: 70px;
+        top: 50px;
+        left: 50px;
+    }
+}

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Scarva";
+    src: url("../../utils/SCARVA.woff");
+}
+
+.accueil
+{
+    height: calc(100vh - 500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: white;
+
+    h1
+    {
+        font-family: "Scarva";
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 35px 20px 20px 20px;
+        text-align: center;
+        letter-spacing: -2px;
+        letter-spacing: 5px;
+        line-height: 1;
+
+        span
+        {
+            font-family: "scarva";
+            font-size: 0.80em;
+        }
+    }
+
+    h2
+    {
+        font-family: "scarva";
+        font-size: 0.80em;
+        padding: 27px;
+        letter-spacing: 5px;
+    }
+}
