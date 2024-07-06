@@ -1,37 +1,8 @@
 // Aide pour Loader : https://github.com/wrongakram/pageloader/blob/main/src/App.js + https://www.youtube.com/watch?v=BtsVMvds3P0&ab_channel=WrongAkram
 
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
-
 import "./loader.scss";
 
-
-const containerVariants = 
-{
-    // visible: {
-    //     transition: {
-    //         staggerChildren: 0.35,
-    //     },
-    // },
-
-
-    hidden: {
-        opacity: 0,
-        y: 200,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: -100,
-      transition: { 
-        ease: "easeInOut",
-        duration: 0.5 
-        }
-    }
-};
 
 const itemVariants = 
 {
@@ -51,26 +22,25 @@ const itemVariants =
       y: -100,
       transition: {
         duration: 2,
-    }
+        }
     }
 };
 
 
-function Loader({setLoading})
+function Loader()
 {
     return (
         <AnimatePresence>
-        {/* // {setLoading && ( */}
+
         <motion.aside 
             className="body-loader"
             variants={itemVariants}
-            onAnimationComplete={() => setLoading(false)}
             initial="hidden"
             animate="visible"
             exit="exit"
             >
 
-            <motion.div className="container"/*  variants={itemVariants} */>
+            <div className="container">
                 
                 <div className="h1-container">
 
@@ -246,9 +216,10 @@ function Loader({setLoading})
 
                 </div>
                 
-            </motion.div>
+            </div>
+
         </motion.aside>
-        {/* )} */}
+
         </AnimatePresence>
     )
 };

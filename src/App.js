@@ -1,6 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import {AnimatePresence, motion, LayoutGroup} from "framer-motion";
+import { useEffect, useState, useTransition } from 'react';
+import {AnimatePresence, motion} from "framer-motion";
 import '../src/app.scss';
 
 import * as THREE from 'three';
@@ -59,55 +59,53 @@ const VantaAnimation = () => {
 
 function App() 
 {
-  const [loading, setLoading] = useState(true);
+  const [isPending, startTransition] = useTransition();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    loading 
-    ? document.getElementById('root').classList.add("loading")
-    : document.getElementById("root").classList.remove("loading");
-  }, [loading]);
+    const timer = setTimeout(() => {
+      startTransition(() => {
+        setIsLoading(false);
+      });
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   return (
-    <LayoutGroup type="crossfade"> 
+    <AnimatePresence>
 
-      <AnimatePresence>
+      {isPending || isLoading ? ( <Loader setIsLoading={setIsLoading}/> ) : 
+      (
 
-        {loading ? (
-          <motion.div key="loader">
+        <motion.div 
+          initial={{ x: '-100vw', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: '100vw', opacity: 0 }}
+          transition={{ duration: 1 }}
+          className={isLoading || isPending ? 'hidden' : ''}>
+        
+        
+          <section id='Accueil'>
+            <Navbar />
+            <Accueil />
+            <VantaAnimation />
+          </section>
+          
+          <section id="À propos">Parallax</section>
+          <section>À propos</section>
+          <section id="Portfolio">Parallax</section> {/* TODO: à voir si on garde */}
+          <section>Portfolio1</section>
+          <section>Portfolio2</section>
+          <section>Portfolio3</section>
+          <section id='Contact'>Contact</section>
+          
+        </motion.div>
 
-            <Loader setLoading={setLoading} />
+      )}
 
-          </motion.div>
-          ) : (
-            <>
+    </AnimatePresence>
 
-              {!loading && (
-                <>
-                
-                  <VantaAnimation />
-                  
-                  <section id='Accueil'>
-                    <Navbar />
-                    <Accueil />
-                  </section>
-                  <section id="À propos">Parallax</section>
-                  <section>À propos</section>
-                  <section id="Portfolio">Parallax</section> {/* TODO: à voir si on garde */}
-                  <section>Portfolio1</section>
-                  <section>Portfolio2</section>
-                  <section>Portfolio3</section>
-                  <section id='Contact'>Contact</section>
-                  
-                </>
-              )}
-
-            </>
-          )}
-
-      </AnimatePresence>
-
-    </LayoutGroup>
   )
 };
 
