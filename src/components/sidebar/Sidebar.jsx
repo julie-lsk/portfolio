@@ -10,17 +10,17 @@ const variants =
     open: {
         clipPath: "circle(1200px at 40px 800px)",
         transition: {
-            type: "spring",
-            stiffness: 20,
+            type: "spring", /* effet ressort */
+            stiffness: 20, /* (20 = lent) --> rigidité : + la valeur est basse, plus l'effet ressort est souple */
         }
     },
     closed: {
         clipPath: "circle(40px at 310px 80px)", /* créé le cercle du menu burger */
         transition: {
-            delay: 0.5,
-            type: "spring",
-            stiffness: 400,
-            damping: 40,
+            delay: 0.5, /* délai avant la transition */
+            type: "spring", /* effet ressort */
+            stiffness: 400, /* (400 = rapide) --> rigidité : + la valeur est haute, plus l'effet ressort est rigide */
+            damping: 40, /* oscillation après effet ressort --> 40 (élevé) = se stabilise vite sans trop d'oscilaltions + si basse = ressort rebondit bcp */
         }
     }
 };
@@ -37,7 +37,7 @@ function Sidebar()
                 <Links />
             </motion.div>
 
-            <ToggleButton setOpen={setOpen}/>
+            <ToggleButton setOpen={setOpen} open={open}/>
 
         </motion.div>
     )
