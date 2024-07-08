@@ -16,6 +16,7 @@ const variants =
     },
     closed: {
         clipPath: "circle(40px at 310px 80px)", /* créé le cercle du menu burger */
+        position: "fixed", /* FIXME: */
         transition: {
             delay: 0.5, /* délai avant la transition */
             type: "spring", /* effet ressort */

@@ -82,8 +82,7 @@ function App()
           initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: '100vw', opacity: 0 }}
-          transition={{ duration: 1 }}
-          className={isLoading || isPending ? 'hidden' : ''}>
+          transition={{ duration: 1 }}>
         
         
           <section id='Accueil'>
@@ -92,8 +91,14 @@ function App()
             <VantaAnimation />
           </section>
           
-          <section id="À propos">Parallax</section>
-          <section>À propos</section>
+          <section id="À propos">
+            Parallax
+          </section>
+
+          <section>
+            À propos
+          </section>
+
           <section id="Portfolio">Parallax</section> {/* TODO: à voir si on garde */}
           <section>Portfolio1</section>
           <section>Portfolio2</section>

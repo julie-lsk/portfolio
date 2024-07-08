@@ -23,25 +23,20 @@ body
 a
 {
     text-decoration: none;
-    color: inherit; /* prend la couleur du parent (body) */
+    color: inherit; /* prend la couleur du parent (body donc white) */
 }
 
 section
 {
-    height: 100vh;
+    height: 100dvh;
     scroll-snap-align: center;
-}
-
-.hidden
-{
-    display: none;
 }
 
 /********** Animation Vanta.js **********/
 #vanta
 {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     position: absolute;
     top: 0;
     left: 0;
