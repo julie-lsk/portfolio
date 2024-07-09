@@ -3,8 +3,8 @@ import { useEffect, useState, useTransition } from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import '../src/app.scss';
 
-import * as THREE from 'three';
-import FOG from 'vanta/dist/vanta.fog.min';
+// import * as THREE from 'three';
+// import FOG from 'vanta/dist/vanta.fog.min';
 
 /********** Composants **********/
 import Loader from "./components/loader/Loader";
@@ -15,46 +15,46 @@ import Parallax from './components/parallax/Parallax';
 
 
 /********** Animation Vanta - background **********/
-const VantaAnimation = () => {
-  const [vantaEffect, setVantaEffect] = useState(null)
+// const VantaAnimation = () => {
+//   const [vantaEffect, setVantaEffect] = useState(null)
   
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(FOG({
-        el: "#vanta",
-        THREE: THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
+//   useEffect(() => {
+//     if (!vantaEffect) {
+//       setVantaEffect(FOG({
+//         el: "#vanta",
+//         THREE: THREE,
+//         mouseControls: true,
+//         touchControls: true,
+//         gyroControls: false,
+//         minHeight: 200.00,
+//         minWidth: 200.00,
 
-        // Rouge : 
-        // highlightColor: 0xcf1d1d,
-        // midtoneColor: 0xac052d,
-        // lowlightColor: 0xc70202,
-        // baseColor: 0x680128,
+//         // Rouge : 
+//         // highlightColor: 0xcf1d1d,
+//         // midtoneColor: 0xac052d,
+//         // lowlightColor: 0xc70202,
+//         // baseColor: 0x680128,
 
-        // Bleu :
-        highlightColor: 0xb6edda,
-        midtoneColor: 0x67d2aa,
-        lowlightColor: 0xbeffde,
-        baseColor: 0x4b9aac,
+//         // Bleu :
+//         highlightColor: 0xb6edda,
+//         midtoneColor: 0x67d2aa,
+//         lowlightColor: 0xbeffde,
+//         baseColor: 0x4b9aac,
 
-        blurFactor: 0.55,
-        zoom: 1.5,
-        speed: 1.1,
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect]) 
+//         blurFactor: 0.55,
+//         zoom: 1.5,
+//         speed: 1.1,
+//       }))
+//     }
+//     return () => {
+//       if (vantaEffect) vantaEffect.destroy()
+//     }
+//   }, [vantaEffect]) 
 
-  return (
-    <div id='vanta'></div>
-  )
-}
+//   return (
+//     <div id='vanta'></div>
+//   )
+// }
 
 
 
@@ -68,28 +68,28 @@ function App()
       startTransition(() => {
         setIsLoading(false);
       });
-    }, 2000);
+    }, []);
     return () => clearTimeout(timer);
   }, []);
 
 
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
 
       {isPending || isLoading ? ( <Loader setIsLoading={setIsLoading}/> ) : 
       (
 
         <motion.div 
-          initial={{ x: '-100vw', opacity: 0 }}
+          /* initial={{ x: '-100vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: '100vw', opacity: 0 }}
-          transition={{ duration: 1 }}>
+          transition={{ duration: 1 }} */>
         
-        
+          <Navbar />
+
           <section id='Accueil'>
-            <Navbar />
             <Accueil />
-            <VantaAnimation />
+            {/* <VantaAnimation /> */}
           </section>
           
           <section id="À propos">

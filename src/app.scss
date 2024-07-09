@@ -1,8 +1,10 @@
-html
-{
-    // scroll-snap-type: y mandatory;
-    scroll-behavior: smooth !important;
-}
+// html
+// {
+//     // scroll-snap-type: y proximity;
+//     // scroll-behavior: smooth !important;
+    
+
+// }
 
 *
 {
@@ -29,8 +31,9 @@ a
 section
 {
     height: 100dvh;
-    scroll-snap-align: center;
+    // scroll-snap-align: center;
 }
+
 
 /********** Animation Vanta.js **********/
 #vanta

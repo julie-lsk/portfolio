@@ -28,12 +28,12 @@ const itemsVariants = {
 }
 
 
-function Links()
+function Links({open})
 {
     const items = ["Accueil", "À propos","Portfolio","Contact"];
 
     return (
-        <motion.div className="links" variants={variants}>
+        <motion.div className="links" variants={variants} style={!open ? {display:"none"} : ""}>
             {items.map(item => (
                 <motion.a 
                     href={`#${item}`} 

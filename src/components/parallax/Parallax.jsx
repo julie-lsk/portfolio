@@ -17,11 +17,11 @@ function Parallax({type})
     return (
         <div 
             className="parallax" 
-            style={{
+            /* style={{
                 background: type === "aPropos" 
                 ? "linear-gradient(180deg, #82d1c7, #eceacf)" 
                 : "linear-gradient(180deg, #111132, #505064)"}}
-            >
+             */>
             <motion.h3 style={{y: yBackground}}>{type === "aPropos" ? "Qui suis-je ?" : "Mes projets"}</motion.h3>
 
             <motion.div className="montagne-1"></motion.div>

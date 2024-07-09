@@ -3,10 +3,12 @@ import {motion} from "framer-motion";
 function ToggleButton({setOpen, open})
 {
     return (
-        <button 
+        <motion.button 
             onClick={() => setOpen(prev => !prev)} /* fera l'inverse de l'état actuel */
-            style={{position:"fixed", top: 57, right: 65}}>
-
+            style={{position:"fixed", top: 57, right: 65}}
+            initial={{opacity:0}}
+            animate={{opacity:1, transition: {delay:1}}} 
+            >
             <svg width="23" height="24" viewBox="0 0 20 20">
                 <motion.path 
                     strokeWidth="3" 
@@ -43,7 +45,7 @@ function ToggleButton({setOpen, open})
                     animate={open ? "open" : "closed"}>
                 </motion.path>
             </svg>
-        </button>
+        </motion.button>
     )
 }
 

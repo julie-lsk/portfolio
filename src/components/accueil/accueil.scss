@@ -11,12 +11,14 @@
 
     .accueil
     {
-        height: calc(100dvh - 200px);
+        height: 100dvh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         color: white;
+        background: linear-gradient(180deg, rgba(19,83,119,1) 28%, rgba(112,221,214,1) 100%);
+        background-attachment: fixed;
 
         h1
         {

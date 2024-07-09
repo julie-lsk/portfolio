@@ -1,4 +1,3 @@
-// import { Link, NavLink } from "react-router-dom";
 import {motion} from 'framer-motion';
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";

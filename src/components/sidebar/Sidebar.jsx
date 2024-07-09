@@ -5,6 +5,12 @@ import Links from './links/Links';
 import ToggleButton from './toggleButton/ToggleButton';
 
 
+
+
+function Sidebar()
+{
+    const [open, setOpen] = useState(false);
+
 const variants = 
 {
     open: {
@@ -16,9 +22,8 @@ const variants =
     },
     closed: {
         clipPath: "circle(40px at 310px 80px)", /* créé le cercle du menu burger */
-        position: "fixed", /* FIXME: */
         transition: {
-            delay: 0.5, /* délai avant la transition */
+            delay: 0.5, /* délai de transition après le clic */
             type: "spring", /* effet ressort */
             stiffness: 400, /* (400 = rapide) --> rigidité : + la valeur est haute, plus l'effet ressort est rigide */
             damping: 40, /* oscillation après effet ressort --> 40 (élevé) = se stabilise vite sans trop d'oscilaltions + si basse = ressort rebondit bcp */
@@ -26,16 +31,11 @@ const variants =
     }
 };
 
-
-function Sidebar()
-{
-    const [open, setOpen] = useState(false);
-
     return (
         <motion.div className='sidebar' animate={open ? "open" : "closed"}> 
         
             <motion.div className="background" variants={variants}> {/* paramètre l'ouverture/fermeture de la sidebar selon div "sidebar" */}
-                <Links />
+                <Links open={open} />
             </motion.div>
 
             <ToggleButton setOpen={setOpen} open={open}/>
