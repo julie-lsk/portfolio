@@ -10,6 +10,7 @@ import FOG from 'vanta/dist/vanta.fog.min';
 import Loader from "./components/loader/Loader";
 import Accueil from "./components/accueil/Accueil";
 import Navbar from "./components/navbar/Navbar";
+import Parallax from './components/parallax/Parallax';
 
 
 
@@ -92,14 +93,16 @@ function App()
           </section>
           
           <section id="À propos">
-            Parallax
+            <Parallax type="aPropos"/>
           </section>
 
           <section>
             À propos
           </section>
 
-          <section id="Portfolio">Parallax</section> {/* TODO: à voir si on garde */}
+          <section id="Portfolio">
+            <Parallax type='portoflio'/>
+          </section> {/* TODO: à voir si on garde */}
           <section>Portfolio1</section>
           <section>Portfolio2</section>
           <section>Portfolio3</section>
