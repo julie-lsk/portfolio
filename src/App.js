@@ -10,7 +10,7 @@ import '../src/app.scss';
 import Loader from "./components/loader/Loader";
 import Accueil from "./components/accueil/Accueil";
 import Navbar from "./components/navbar/Navbar";
-import Parallax from './components/parallax/Parallax';
+import Parallax1 from './components/parallax/Parallax1';
 
 
 
@@ -93,7 +93,7 @@ function App()
           </section>
           
           <section id="À propos">
-            <Parallax type="aPropos"/>
+            <Parallax1 />
           </section>
 
           <section>
@@ -101,7 +101,7 @@ function App()
           </section>
 
           <section id="Portfolio">
-            <Parallax type='portoflio'/>
+            <Parallax1 />
           </section> {/* TODO: à voir si on garde */}
           <section>Portfolio1</section>
           <section>Portfolio2</section>

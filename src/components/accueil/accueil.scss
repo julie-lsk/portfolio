@@ -18,7 +18,6 @@
         align-items: center;
         color: white;
         background: linear-gradient(180deg, rgba(19,83,119,1) 28%, rgba(112,221,214,1) 100%);
-        background-attachment: fixed;
 
         h1
         {
@@ -31,6 +30,8 @@
             letter-spacing: -2px;
             letter-spacing: 5px;
             line-height: 1;
+            letter-spacing: 5px;
+            z-index: 2;
 
             span
             {
@@ -41,10 +42,10 @@
 
         h2
         {
+            position: relative;
             font-family: "scarva";
             font-size: 3vw;
             padding: 27px;
-            letter-spacing: 5px;
         }
 
         img
@@ -53,6 +54,42 @@
             height: auto;
             filter: invert(1); /* noir ==> blanc */
             margin-top: 2%;
+        }
+
+        .moon
+        {
+            position: absolute;
+            margin: 0;
+            width: 40%;
+            top: 10dvh;
+            left: 50px;
+            opacity: 55%;
+            z-index: 1;
+            filter: invert(0);
+        }
+
+        .stars
+        {
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            top: -10px;
+            right: 50px;
+            opacity: 60%;
+            z-index: 0;
+            filter: invert(0)
+        }
+
+        .star
+        {
+            position: absolute;
+            margin: 0;
+            width: 40%;
+            top: -100px;
+            right: 50px;
+            opacity: 70%;
+            z-index: 0;
+            filter: invert(0)
         }
     }
 }
