@@ -4,7 +4,7 @@ function ToggleButton({setOpen, open})
 {
     return (
         <motion.button 
-            onClick={() => setOpen(prev => !prev)} /* fera l'inverse de l'état actuel */
+            onClick={() => setOpen(prev => !prev)}
             style={{position:"fixed", top: 57, right: 65}}
             initial={{opacity:0}}
             animate={{opacity:1, transition: {delay:1}}} 

@@ -24,14 +24,14 @@ function Parallax2({type})
         <div className="parallax2">
 
             <motion.h3 style={{y: yText}}>Mes projets</motion.h3>
-
+{/* 
             <motion.div className="montagne-1"></motion.div>
             <motion.div className="arbres"></motion.div>
             <motion.div className="montagne-2"></motion.div>
             <motion.div className="montagne-3"></motion.div>
             <motion.div style={{x: xNuage1}} className="nuage-1"></motion.div>
             <motion.div style={{x: xNuage2}} className="nuage-2"></motion.div>
-            <motion.div style={{x: xNuage3}} className="nuage-3"></motion.div>
+            <motion.div style={{x: xNuage3}} className="nuage-3"></motion.div> */}
 
         </div>
     )

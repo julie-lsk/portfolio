@@ -11,50 +11,8 @@ import Loader from "./components/loader/Loader";
 import Accueil from "./components/accueil/Accueil";
 import Navbar from "./components/navbar/Navbar";
 import Parallax1 from './components/parallax/Parallax1';
-
-
-
-/********** Animation Vanta - background **********/
-// const VantaAnimation = () => {
-//   const [vantaEffect, setVantaEffect] = useState(null)
-  
-//   useEffect(() => {
-//     if (!vantaEffect) {
-//       setVantaEffect(FOG({
-//         el: "#vanta",
-//         THREE: THREE,
-//         mouseControls: true,
-//         touchControls: true,
-//         gyroControls: false,
-//         minHeight: 200.00,
-//         minWidth: 200.00,
-
-//         // Rouge : 
-//         // highlightColor: 0xcf1d1d,
-//         // midtoneColor: 0xac052d,
-//         // lowlightColor: 0xc70202,
-//         // baseColor: 0x680128,
-
-//         // Bleu :
-//         highlightColor: 0xb6edda,
-//         midtoneColor: 0x67d2aa,
-//         lowlightColor: 0xbeffde,
-//         baseColor: 0x4b9aac,
-
-//         blurFactor: 0.55,
-//         zoom: 1.5,
-//         speed: 1.1,
-//       }))
-//     }
-//     return () => {
-//       if (vantaEffect) vantaEffect.destroy()
-//     }
-//   }, [vantaEffect]) 
-
-//   return (
-//     <div id='vanta'></div>
-//   )
-// }
+import Parallax2 from './components/parallax/Parallax2';
+import APropos from "./components/a_propos/APropos";
 
 
 
@@ -76,20 +34,15 @@ function App()
   return (
     <AnimatePresence initial={false}>
 
-      {isPending || isLoading ? ( <Loader setIsLoading={setIsLoading}/> ) : 
+      {isPending || isLoading ? ( <Loader setIsLoading={setIsLoading} /> ) : 
       (
 
-        <motion.div 
-          /* initial={{ x: '-100vw', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: '100vw', opacity: 0 }}
-          transition={{ duration: 1 }} */>
+        <motion.div>
         
           <Navbar />
 
           <section id='Accueil'>
             <Accueil />
-            {/* <VantaAnimation /> */}
           </section>
           
           <section id="À propos">
@@ -97,11 +50,11 @@ function App()
           </section>
 
           <section>
-            À propos
+            <APropos />
           </section>
 
           <section id="Portfolio">
-            <Parallax1 />
+            <Parallax2 />
           </section> {/* TODO: à voir si on garde */}
           <section>Portfolio1</section>
           <section>Portfolio2</section>
