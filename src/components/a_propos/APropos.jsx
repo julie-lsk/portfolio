@@ -22,21 +22,21 @@ function APropos()
     const ref = useRef();
 
     /* Suit la progression du défilement vertical */
-    const {scrollYProgress: scrollYProgress2} = useScroll({
+    const {scrollYProgress} = useScroll({
         target: ref,
         offset: ["start start", "end start"] /* l'animation démarre au top de la vue de l'utilisateur, + s'arrête au bottom  */
     })
 
-    const yText = useTransform(scrollYProgress2, [0, 1], ["-300%", "800%"]);
+    const yText = useTransform(scrollYProgress, [0, 1], ["-200%", "200%"]);
 
     /* Suit le scroll en Y et le transforme en X grâce au style dans la motion.div */
-    const xNuage1 = useTransform(scrollYProgress2, [0, 1], [500, -9000]); 
-    const xNuage2 = useTransform(scrollYProgress2, [0, 1], [0, 8000]); 
-    const xNuage3 = useTransform(scrollYProgress2, [0, 1], [-500, 10000]); 
-    const yBirds = useTransform(scrollYProgress2, [0, 1], [1900, -5000]); 
+    const xNuage1 = useTransform(scrollYProgress, [0, 1], [500, -9000]); 
+    const xNuage2 = useTransform(scrollYProgress, [0, 1], [0, 8000]); 
+    const xNuage3 = useTransform(scrollYProgress, [0, 1], [-500, 10000]); 
+    const yBirds = useTransform(scrollYProgress, [0, 1], [2000, -2000]); 
 
     return (
-        <div className="parallax1">
+        <div className="APropos">
 
             <motion.div style={{x: xNuage1}} className="nuage-1"></motion.div>
             <motion.div style={{x: xNuage2}} className="nuage-2"></motion.div>
@@ -57,6 +57,7 @@ function APropos()
                 </div>
 
                 <div className="skills">
+
                     <div className="ligne1">
                         <img src={big3} alt="" />
                         <img src={sass} alt="" />
@@ -75,7 +76,6 @@ function APropos()
                         <img src={scrum} alt="" />
                         <img src={api} alt="" />
                     </div>
-                    
                     
                 </div>
             </div>
