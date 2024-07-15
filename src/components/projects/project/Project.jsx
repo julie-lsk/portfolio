@@ -15,21 +15,25 @@ const Project = ({project}) =>
 
     
     return (
-        <section ref={ref} className="project-wrapper">
+        <section ref={ref} className="container-project">
+
+            <div className="wrapper">
             
-            <img src={project.img} alt={`Mockup du projet ${project.title}`} />
+                <img src={project.img} alt={`Mockup du projet ${project.title}`} />
 
-            <motion.div className='infos-wrapper' style={{y}}>
-                <h4>{project.title}</h4>
-                <p>{project.description}</p>
+                <motion.div className='infos-wrapper' style={{y}}>
+                    <h4>{project.title}</h4>
+                    <p>{project.description}</p>
 
-                <div className='language-wrapper'>
-                    {project.languages.map((language, index) => (
-                        <img src={language} key={index} alt="Langage de programmation/outil/compétence utilisé" />
-                    ))}
-                </div>
-                <a href={project.github}></a>
-            </motion.div>
+                    <div className='language-wrapper'>
+                        {project.languages.map((language, index) => (
+                            <a key={index} ><img src={language} alt="Langage de programmation/outil/compétence utilisé" /></a>
+                        ))}
+                    </div>
+                    <a href={project.github}></a>
+                </motion.div>
+
+            </div>
 
         </section>
     )

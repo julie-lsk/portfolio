@@ -8,12 +8,14 @@
     {
         position: sticky; /* pour que "Mes projets" ne bougent pas lors du scroll */
         right: 0;
-        top: 20px;
+        top: 0;
         left: 0;
         padding: 50px;
         text-align: center;
         color: rgb(80, 85, 90);
         font-size: 5em;
+        backdrop-filter: blur(20px);
+        z-index: 50;
 
         h3
         {
