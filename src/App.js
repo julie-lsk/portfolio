@@ -3,16 +3,13 @@ import { useEffect, useState, useTransition } from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import '../src/app.scss';
 
-// import * as THREE from 'three';
-// import FOG from 'vanta/dist/vanta.fog.min';
 
 /********** Composants **********/
 import Loader from "./components/loader/Loader";
 import Accueil from "./components/accueil/Accueil";
 import Navbar from "./components/navbar/Navbar";
-import Parallax1 from './components/parallax/Parallax1';
-import Parallax2 from './components/parallax/Parallax2';
-import APropos from "./components/a_propos/APropos";
+import APropos from './components/a_propos/APropos';
+import Portfolio from "./components/projects/Portfolio";
 
 
 
@@ -32,7 +29,7 @@ function App()
 
 
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence>
 
       {isPending || isLoading ? ( <Loader setIsLoading={setIsLoading} /> ) : 
       (
@@ -46,16 +43,15 @@ function App()
           </section>
           
           <section id="À propos">
-            <Parallax1 />
-          </section>
-
-          <section>
             <APropos />
           </section>
 
+          <section>
+            <Portfolio />
+          </section>
+
           <section id="Portfolio">
-            <Parallax2 />
-          </section> {/* TODO: à voir si on garde */}
+          </section>
           <section>Portfolio1</section>
           <section>Portfolio2</section>
           <section>Portfolio3</section>

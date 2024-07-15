@@ -1,0 +1,16 @@
+.portfolio
+{
+    height: 100dvh;
+    background: linear-gradient(180deg, rgba(199,235,220,1) 29%, rgba(255,200,117,1) 100%);
+    // background: linear-gradient(180deg, rgba(199,235,220,1) 29%, rgba(113,142,130,1) 100%); /* bleu clair/vert vers foncé */
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    overscroll-behavior-y: contain;
+
+    p
+    {
+        font-size: 3em;
+        color: rgb(57, 52, 52);
+    }
+}
