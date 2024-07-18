@@ -8,25 +8,28 @@
     color: rgb(80, 85, 90);
     font-size: 2em;
 
-
     .wrapper
     {
         display: flex;
         align-items: center;
-        max-width: 1366px;
+        max-width: 75%; /* 1366px */
         height: 100%;
         margin: auto;
         gap: 50px;
 
-        img
+        .mockup
         {
             flex: 1; /* pour avoir la même taille que le texte d'infos */
-            height: 50%;
+            width: 100%;
             object-fit: cover;
         }
 
         .infos-wrapper
         {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: max-content;
             flex: 1; /* pour avoir la même taille que l'img */
 
             h4
@@ -38,9 +41,31 @@
 
             p
             {
-                width: 80%;
+                width: 100%;
                 padding-bottom: 30px;
                 text-align: justify;
+            }
+
+            .github
+            {
+                width: 15%;
+                height: auto;
+                margin-left: -20px;
+            }
+
+            .language-wrapper
+            {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                height: max-content;
+                padding-bottom: 50px;
+
+                img /* langages */
+                {
+                    width: 15%;
+                    min-height: 35px;
+                }
             }
         }
     }

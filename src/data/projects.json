@@ -2,11 +2,11 @@
     {
         "id": 1,
         "title": "Kasa - agence immobilière",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "img": "./Kasa/kasa_mockup.png",
         "languages": [
-            "https://example.com/language1.png",
-            "https://example.com/language2.png"
+            "./langages/react.webp",
+            "./langages/sass.png"
         ],
         "github": "https://github.com/julie-lsk/react_app_kasa.git"
     },
@@ -16,8 +16,9 @@
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "img": "./MVG/mvg_mockup_final.png",
         "languages": [
-            "https://example.com/language3.png",
-            "https://example.com/language4.png"
+            "./langages/node_js.png",
+            "./langages/Mongodb.png",
+            "./langages/express_js.png"
         ],
         "github": "https://github.com/julie-lsk/backend_mon_vieux_grimoire.git"
     },
@@ -25,10 +26,10 @@
         "id": 3,
         "title": "Nina Carducci - photographe",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "img": "../../utils/assets/mockup/Carducci/Carducci_mockup_final.jpg",
+        "img": "./Carducci/carducci_mockup_final.png",
         "languages": [
-            "https://example.com/language5.png",
-            "https://example.com/language6.png"
+            "./langages/seo.png",
+            "./langages/accessibility.png"
         ],
         "github": "https://github.com/julie-lsk/seo_nina_carducci.git"
     }

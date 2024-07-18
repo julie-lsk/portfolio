@@ -27,12 +27,12 @@ function APropos()
         offset: ["start start", "end start"] /* l'animation démarre au top de la vue de l'utilisateur, + s'arrête au bottom  */
     })
 
-    const yText = useTransform(scrollYProgress, [0, 1], ["-200%", "200%"]);
+    const yText = useTransform(scrollYProgress, [0, 1], ["-0%", "2500%"]);
 
     /* Suit le scroll en Y et le transforme en X grâce au style dans la motion.div */
-    const xNuage1 = useTransform(scrollYProgress, [0, 1], [500, -9000]); 
-    const xNuage2 = useTransform(scrollYProgress, [0, 1], [0, 8000]); 
-    const xNuage3 = useTransform(scrollYProgress, [0, 1], [-500, 10000]); 
+    const xNuage1 = useTransform(scrollYProgress, [0, 1], [-500, 12000]); 
+    const xNuage2 = useTransform(scrollYProgress, [0, 1], [1000, -10000]); 
+    const xNuage3 = useTransform(scrollYProgress, [0, 1], [1000, -2500]); 
     const yBirds = useTransform(scrollYProgress, [0, 1], [2000, -2000]); 
 
     return (
@@ -48,36 +48,32 @@ function APropos()
             <div className="flex">
                 <div className="description">
                     <p>Je suis <strong>Julie Lausecker</strong>, j'ai 23 ans et je suis développeuse web/front-end junior avec un intérêt particulier pour le <strong>design</strong>, l'<strong>UX</strong> et l'<strong>UI</strong>.</p> <br /> 
-                    <p>Grâce à une formation de niveau bac+2, j'ai pu réaliser 7 projets divers et variés. Voici ci-après les quelques compétences acquises.</p> <br />
 
-                    <p id="alternance">Je suis actuellement à la recherche d'une <strong>alternance</strong> pour la rentrée de <strong>septembre 2024</strong>.</p> <br />
-                    <p>Je suis très motivée à approfondir mes connaissances tout en travaillant sur des projets concrets.</p> <br />
+                    <p id="space">Afin d'approfondir mes compétences, je suis à la recherche d'une <strong>alternance</strong> pour la rentrée de <strong>septembre 2024</strong>.</p> <br />
+                    <p>Je suis très motivée à poursuivre mes études le plus loin possible, tout en travaillant sur des projets concrets aux côtés d'experts.</p> <br />
 
-                    <p id="alternanceBis">Si vous êtes intéressé par mon profil, n'hésitez pas à <a href="mailto:julielausecker@gmail.com?subject=Demande d'information&body=Bonjour Julie ! J'aimerais avoir plus d'informations sur...">me contacter</a>, je serai ravie de discuter avec vous !</p>
-                </div>
+                    <p id="space">Si vous êtes intéressé par mon profil, n'hésitez pas à <a href="#Contact" id="contact-link">me contacter</a>, je serai ravie de discuter avec vous !</p> <br />
 
-                <div className="skills">
-
-                    <div className="ligne1">
-                        <img src={big3} alt="" />
-                        <img src={sass} alt="" />
-                        <img src={react} alt="" />
-                        <img src={framerMotion} alt="" />
-                    </div>
-                    <div className="ligne2">
-                        <img src={git} alt="" />
-                        <img src={github} alt="" />
-                        <img src={nodeJS} alt="" />
-                        <img src={mongoDB} alt="" />
-                    </div>
-                    <div className="ligne3">
-                        <img src={expressJS} alt="" />
-                        <img src={seo} alt="" />
-                        <img src={scrum} alt="" />
-                        <img src={api} alt="" />
-                    </div>
+                    <p id="space">Pour en savoir plus, téléchargez mon <a href="./cv_julie_lausecker.pdf" download id="cv">CV</a> !</p>
                     
                 </div>
+
+
+                <div className="skills-wrapper">
+                    <img src={big3} title="JavaScript - HTML - CSS" alt="JavaScript - HTML - CSS" />
+                    <img src={sass} title="SASS - SCSS" alt="SASS - SCSS" id="big" />
+                    <img src={react} title="React"  alt="React" id="big" />
+                    <img src={nodeJS} title="Node.js" alt="Node.js" id="small" />
+                    <img src={mongoDB} title="Mongo DB" alt="Mongo DB" id="small" />
+                    <img src={expressJS} title="Express.js" alt="Express.js" id="small" />
+                    <img src={framerMotion} title="Framer-motion" alt="Framer-motion" id="big" />
+                    <img src={seo} title="SEO (Search Engine Optimization)" alt="SEO (Search Engine Optimization)" id="big" />
+                    <img src={scrum} title="Méthode SCRUM - gestion de projet" alt="Méthode SCRUM - gestion de projet" />
+                    <img src={git} title="git - outil de versioning" alt="git - outil de versioning" />
+                    <img src={github} title="GitHub" alt="GitHub" />
+                    <img src={api} title="API REST - communication entre applications" alt="API REST - communication entre applications" id="small" />
+                </div>
+
             </div>
 
         </div>

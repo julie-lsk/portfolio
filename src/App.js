@@ -10,6 +10,7 @@ import Accueil from "./components/accueil/Accueil";
 import Navbar from "./components/navbar/Navbar";
 import APropos from './components/a_propos/APropos';
 import Portfolio from "./components/projects/Portfolio";
+import Contact from './components/contact/Contact';
 
 
 
@@ -48,7 +49,11 @@ function App()
 
           <Portfolio />
 
-          <section id='Contact'>Contact</section>
+          <section id='Contact'>
+            <Contact />
+          </section>
+
+          <footer></footer>
           
         </motion.div>
 

@@ -1,8 +1,8 @@
 .portfolio
 {
     position: relative;
-    background: linear-gradient(180deg, rgba(199,235,220,1) 29%, rgba(255,200,117,1) 100%);
-    // background: linear-gradient(180deg, rgba(199,235,220,1) 29%, rgba(113,142,130,1) 100%); /* bleu clair/vert vers foncé */
+    // background: linear-gradient(180deg, rgba(199,235,220,1) 29%, rgba(255,200,117,1) 100%);
+    background: linear-gradient(180deg, rgba(114,230,238,1) 36%, rgba(235,207,181,1) 96%);
 
     .progress
     {
@@ -10,7 +10,7 @@
         right: 0;
         top: 0;
         left: 0;
-        padding: 50px;
+        padding: 100px 100px 30px 100px;
         text-align: center;
         color: rgb(80, 85, 90);
         font-size: 5em;
