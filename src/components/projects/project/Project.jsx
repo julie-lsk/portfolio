@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "./project.scss";
-import github from "../../../utils/assets/langages/github.png";
 import Modal from "../modal/Modal";
 
 
@@ -9,20 +8,24 @@ const Project = ({project}) =>
 {
     /********** Modale **********/
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedProject, setSelectedProject] = useState(null);
-    const ref = useRef();
-
-    const openModal = (project) => {
-        setSelectedProject(project);
+    const [isClosing, setIsClosing] = useState(false);
+    
+    const openModal = () => {
         setIsModalOpen(true);
     };
-
+    
     const closeModal = () => {
-        setIsModalOpen(false);
-        setSelectedProject(null);
+        setIsClosing(true);
+        // Attend que l'animation soit terminée avant de fermer la modale
+        setTimeout(() => {
+            setIsModalOpen(false);
+            setIsClosing(false);
+        }, 300);
     };
-
+    
     /********** Animation **********/
+    const ref = useRef();
+
     const {scrollYProgress} = useScroll({
         target: ref,
     });
@@ -36,21 +39,12 @@ const Project = ({project}) =>
 
             <div className="wrapper">
             
-                <a href="#" onClick={() => openModal(project)}>
+                <a href="#" onClick={() => openModal(project.id)}>
                     <img src={project.img} ref={ref} alt={`Mockup du projet ${project.title}`} className="mockup" />
                 </a>
 
 
-                <Modal isOpen={isModalOpen} onClose={closeModal} project={project}>
-                    {selectedProject && (
-                        <>
-                            <h2>{selectedProject.title}</h2>
-                            <img src={selectedProject.img} alt={`Projet ${selectedProject.title}`} />
-                            <p>{selectedProject.description}</p>
-                            <p>{selectedProject.details}</p>
-                        </>
-                    )}
-                </Modal>
+                <Modal isModalOpen={isModalOpen} onClose={closeModal} isClosing={isClosing} project={project} />
 
 
                 <motion.div className='infos-wrapper' style={{y: yInfos}}>
@@ -63,8 +57,6 @@ const Project = ({project}) =>
                             <img src={language} alt="Langage de programmation/outil/compétence utilisé" key={index} />
                         ))}
                     </div>
-
-                    <a href={project.github} target="_blank"><img src={github} alt={`Logo GitHub avec lien vers le projet ${project.title}`} className="github"></img></a>
 
                 </motion.div>
 

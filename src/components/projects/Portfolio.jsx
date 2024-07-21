@@ -25,6 +25,7 @@ function Portfolio()
 
         <div className="portfolio" id="Portfolio" ref={ref}>
 
+            {/* Barre de progression */}
             <div className="progress">
 
                 <h3>Mes projets</h3>

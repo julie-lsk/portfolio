@@ -10,25 +10,89 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  
+  .modal-close-button 
+  {
+    position: fixed;
+    top: 410px;
+    right: 690px;
+    padding-right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img
+    {
+      width: 40px;
+    }
+
+    img:hover
+    {
+      transform: scale(1.25);
+    }
+
+  }
+
+  .modal-content 
+  {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    width: 60%;
+    height: 60%;
+    overflow: auto;
+
+    h4
+    {
+      padding-bottom: 30px;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    p
+    {
+      font-size: 1.6rem;
+      text-align: justify;
+    }
+
+    #avis
+    {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .commentaire
+    {
+      margin-bottom: 30px;
+    }
+  
+    .github
+    {
+      width: 7%;
+      min-width: 90px;
+      height: auto;
+      margin-top: 20px;
+      margin-left: -20px;
+    }
+  
+    .mockup-wrapper
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      padding: 50px 0;
+      
+      img
+      {
+        width: 100%;
+        max-width: fit-content;
+        height: 80%;
+        max-height: 430px;
+      }
+    }
+  }
 }
 
-.modal-content 
-{
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 70%;
-  height: 70%;
-  overflow: auto;
-}
-
-.modal-close-button 
-{
-  position: absolute;
-  top: 240px;
-  right: 350px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
