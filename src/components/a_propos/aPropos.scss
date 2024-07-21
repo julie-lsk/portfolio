@@ -136,11 +136,11 @@
 
     .nuage-1
     {
-        background-image: url("../../utils/assets/parallax_apropos/1grand_nuage_devant.png");
+        background-image: url("../../utils/assets/parallax_apropos/1grand_nuage_devant.webp");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
-        width: 100%;
+        width: 70%;
         height: 100%;
         position: absolute;
         top: -15vh;
@@ -149,11 +149,11 @@
 
     .nuage-2
     {
-        background-image: url("../../utils/assets/parallax_apropos/2long_nuage_fond.png");
+        background-image: url("../../utils/assets/parallax_apropos/2long_nuage_fond.webp");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 100%;
+        width: 70%;
         height: 100%;
         position: absolute;
         bottom: -45vh;
@@ -162,27 +162,27 @@
 
     .nuage-3
     {
-        background-image: url("../../utils/assets/parallax_apropos/3petits_nuages_haut_gauche.png");
+        background-image: url("../../utils/assets/parallax_apropos/3petits_nuages_haut_gauche.webp");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: top;
-        width: 100%;
+        width: 70%;
         height: 100%;
         position: absolute;
         z-index: 2;
     }
 
-    .birds
-    {
-        background-image: url("../../utils/assets/parallax_apropos/birds.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        right: -800px;
-        top: -150px;
-        z-index: 2;
-    }
+    // .birds
+    // {
+    //     background-image: url("../../utils/assets/parallax_apropos/birds.webp");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     background-position: top;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     right: -800px;
+    //     top: -150px;
+    //     z-index: 2;
+    // }
 }

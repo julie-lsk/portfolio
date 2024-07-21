@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import {motion, useScroll, useTransform} from "framer-motion";
 import mouseScroll from "../../utils/assets/mouse_scroll.png";
-import moon from "../../utils/assets/half_moon.png";
-import stars from "../../utils/assets/stars.png";
-// import star from "../../utils/assets/star.png";
+import moon from "../../utils/assets/half_moon.webp";
+import stars from "../../utils/assets/stars.webp";
 import "./accueil.scss";
 
 
@@ -33,22 +32,6 @@ const textVariants =
         }
     }
 };
-
-// const starsVariants = {
-//     initial: {
-//         scale: 0.5
-//     },
-
-//     animate: {
-//         scale: [0.5, 1],
-//         transition: {
-//             repeat: Infinity,
-//             repeatType: "mirror",
-//             duration: 1,
-//             ease: "easeInOut"
-//         }
-//     }
-// }
 
 
 function Accueil()
@@ -81,7 +64,6 @@ function Accueil()
 
                 <motion.img src={moon} style={{y: yMoon}} className="moon" alt="Demi lune"></motion.img>
                 <motion.img src={stars} style={{x: xStars}} className="stars" alt="Étoiles"></motion.img>
-                {/* <motion.img src={star} variants={starsVariants} initial="initial" animate="animate" className="star" alt="Étoile"></motion.img> */}
 
             </motion.div>
 

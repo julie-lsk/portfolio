@@ -10,16 +10,18 @@ const Project = ({project}) =>
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     
-    const openModal = () => {
+    const openModal = (event) => {
+        event.preventDefault(); /* évite que la modale soit ouverte tout en haut de la page */
         setIsModalOpen(true);
+        document.body.classList.add('modal-open'); /* pour overflow: hidden; = empêche scroll qd la modale est ouverte */
     };
     
     const closeModal = () => {
         setIsClosing(true);
-        // Attend que l'animation soit terminée avant de fermer la modale
-        setTimeout(() => {
+        setTimeout(() => { // Attend que l'animation soit terminée avant de fermer la modale
             setIsModalOpen(false);
             setIsClosing(false);
+            document.body.classList.remove('modal-open');
         }, 300);
     };
     
@@ -39,7 +41,7 @@ const Project = ({project}) =>
 
             <div className="wrapper">
             
-                <a href="#" onClick={() => openModal(project.id)}>
+                <a href="#" onClick={(event) => openModal(event)}>
                     <img src={project.img} ref={ref} alt={`Mockup du projet ${project.title}`} className="mockup" />
                 </a>
 

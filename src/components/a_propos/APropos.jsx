@@ -33,7 +33,7 @@ function APropos()
     const xNuage1 = useTransform(scrollYProgress, [0, 1], [-500, 12000]); 
     const xNuage2 = useTransform(scrollYProgress, [0, 1], [1000, -10000]); 
     const xNuage3 = useTransform(scrollYProgress, [0, 1], [1000, -2500]); 
-    const yBirds = useTransform(scrollYProgress, [0, 1], [2000, -2000]); 
+    // const yBirds = useTransform(scrollYProgress, [0, 1], [2000, -2000]); 
 
     return (
         <div className="APropos">
@@ -41,7 +41,7 @@ function APropos()
             <motion.div style={{x: xNuage1}} className="nuage-1"></motion.div>
             <motion.div style={{x: xNuage2}} className="nuage-2"></motion.div>
             <motion.div style={{x: xNuage3}} className="nuage-3"></motion.div>
-            <motion.div style={{y: yBirds}} className="birds"></motion.div>
+            {/* <motion.div style={{y: yBirds}} className="birds"></motion.div> */}
 
             <motion.h3 style={{y: yText}}>Qui suis-je ?</motion.h3>
 
