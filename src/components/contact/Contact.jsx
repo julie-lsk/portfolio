@@ -1,5 +1,7 @@
-import {motion} from 'framer-motion';
+import {motion, useInView} from 'framer-motion';
+import {useRef} from "react";
 import "./contact.scss";
+import ContactForm from './contactForm/ContactForm';
 
 
 const variants = 
@@ -22,8 +24,12 @@ const variants =
 
 function Contact()
 {
+    const ref = useRef();
+
+    const isInView = useInView(ref, {margin: "-100px"});
+
     return (
-        <motion.div variants={variants} className="contact" initial="initial" whileInView="animate">
+        <motion.div ref={ref} variants={variants} className="contact" initial="initial" whileInView="animate">
             
             <motion.div variants={variants} className="text-container">
 
@@ -48,14 +54,32 @@ function Contact()
 
 
             <div className="form-container">
-                <form>
 
-                    <input type="text" name="" id="" placeholder="Nom" required />
-                    <input type="text" name="" id="" placeholder="E-mail" required />
-                    <textarea rows={8} placeholder="Votre message" />
-                    <button>Envoyer</button>
+                <motion.div 
+                    className="email-svg" 
+                    initial={{opacity: 1}} 
+                    whileInView={{opacity: 0}} 
+                    transition={{delay: 3, duration: 1}}
+                    >
 
-                </form>
+                    <svg strokeWidth="0.2" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>{`.cls-1{fill:none;stroke:#50555A;stroke-linecap:round;stroke-linejoin:round;}`}</style>
+                        </defs>
+
+                        <motion.path 
+                            initial={{pathLength: 0}} 
+                            animate={isInView && {pathLength: 1}}
+                            transition={{duration: 3, delay: 1}}
+                            class="cls-1" 
+                            d="M6.47,10.71a2,2,0,0,0-2,2h0V35.32a2,2,0,0,0,2,2H41.53a2,2,0,0,0,2-2h0V12.68a2,2,0,0,0-2-2H6.47Zm33.21,3.82L24,26.07,8.32,14.53"
+                        />
+                    </svg>
+
+                </motion.div>
+
+                <ContactForm />
+
             </div>
 
         </motion.div>

@@ -41,9 +41,9 @@ const Project = ({project}) =>
 
             <div className="wrapper">
             
-                <a href="#" onClick={(event) => openModal(event)}>
+                <button onClick={(event) => openModal(event)}>
                     <img src={project.img} ref={ref} alt={`Mockup du projet ${project.title}`} className="mockup" />
-                </a>
+                </button>
 
 
                 <Modal isModalOpen={isModalOpen} onClose={closeModal} isClosing={isClosing} project={project} />

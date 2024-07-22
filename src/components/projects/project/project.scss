@@ -10,12 +10,20 @@
 
     .wrapper
     {
+        position: relative;
         display: flex;
         align-items: center;
         max-width: 75%; /* 1366px */
         height: 100%;
         margin: auto;
         gap: 50px;
+
+        button
+        {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
 
         .mockup
         {
