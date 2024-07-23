@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Kasa - agence immobilière",
         "description": "Site de location d'appartement responsive avec un caroussel d'images pour découvrir les logements, avec également des petites animations.",
-        "img": "./Kasa/kasa_mockup.png",
+        "img": "./Kasa/kasa_mockup.webp",
         "languages": [
             "./langages/react.webp",
             "./langages/sass.png"
@@ -14,13 +14,25 @@
             "./Kasa/mockup_tel.webp",
             "./Kasa/mockup_desktop.webp"
         ],
-        "commentaire": "Premier projet codé en React ! Challenge très intéréssant, de par la découverte de nouvelles fonctionnalités/pratiques et de par le responsive (géré avec les média Queries). Il m'a beaucoup plu et est très inspirant pour la suite."
+        "commentaire": "Premier projet codé en React ! Challenge très intéréssant, de par la découverte de nouvelles fonctionnalités/pratiques et de par le responsive (géré avec les média Queries). Il m'a beaucoup plu et est très inspirant pour la suite.",
+        "difficultes": [
+            "Découverte de React",
+            "L'utilisation des hooks",
+            "La gestion de l'état des composants",
+            "Réaliser des animations selon l'état du composant"
+        ],
+        "pointsForts": [
+            "Gérer les routes avec React Router",
+            "Créer des routes dynamiques",
+            "Coder le caroussel d'images",
+            "Rendre le site responsive"
+        ]
     },
     {
         "id": 2,
         "title": "Mon Vieux Grimoire",
         "description": "Cette librairie a décidé de créer un site pour référencer et noter des livres. Un système d'authentification a été mis en place pour permettre aux utilisateurs de noter, ajouter, modifier ou supprimer un livre (avec des restrictions). Uniquement la partie du backend a été réalisé ici.",
-        "img": "./MVG/mvg_mockup_final.png",
+        "img": "./MVG/mvg_mockup_final.webp",
         "languages": [
             "./langages/node_js.png",
             "./langages/Mongodb.png",
@@ -32,14 +44,26 @@
             "./MVG/mockup_tel.webp",
             "./MVG/mockup_desktop.webp"
         ],
-        "commentaire": "Projet très intéréssant à coder ! Grâce à ce projet complet, j'ai totalement découvert le back, avec les opérations du CRUD, gérer les erreurs, l'authentification, les contrôleurs, les middlewares... J'ai également découvert pleins d'outils ou librairies comme bcrypt, Mongoose, JWT, dotenv (pour MDP de la BDD), multer et sharp pour gérer les images entrantes... ect. J'ai hâte de refaire un projet similaire !"
-
+        "commentaire": "Projet très intéréssant à coder ! Grâce à ce projet complet, j'ai totalement découvert le back, avec les opérations du CRUD, gérer les erreurs, l'authentification, les contrôleurs, les middlewares... J'ai également découvert pleins d'outils ou librairies comme bcrypt, Mongoose, JWT, dotenv (pour MDP de la BDD), multer et sharp pour gérer les images entrantes... ect. J'ai hâte de refaire un projet similaire !",
+        "difficultes": [
+            "La configuration du serveur Express",
+            "La découverte de Mongo DB",
+            "Implémenter les opérations du CRUD et gérer les erreurs",
+            "Suivre le cahier des charges et les spécifications fonctionnelles"
+        ],
+        "pointsForts": [
+            
+            "Créer un système d'authentification",
+            "Optimiser la qualité des images chargées",
+            "Gérer le système de notation des livres",
+            "Créer des modèles de données pour la BDD"
+        ]
     },
     {
         "id": 3,
         "title": "Nina Carducci - photographe",
         "description": "3 audits ont été réalisé : un audit SEO, un audit de performance et un audit d'accessibilité. Le but était d'évaluer la visibilité, les forces et faiblesses en terme de référencement, la performance et l'efficacité du site ainsi que son accessibilité pour les utilisateurs de technologies d'assistance.",
-        "img": "./Carducci/carducci_mockup_final.png",
+        "img": "./Carducci/carducci_mockup_final.webp",
         "languages": [
             "./langages/seo.png",
             "./langages/accessibility.png"
@@ -50,7 +74,18 @@
             "./Carducci/mockup_tel.webp",
             "./Carducci/mockup_desktop.webp"
         ],
-        "commentaire": "Ce projet m'a fait réalisé l'importance du SEO. Sans lui, un site est perdu dans l'océan d'internet, invisible pour des potentiels clients ! J'ai beaucoup apprécié voir les résultats de mon travail petit à petit... grâce aux outils comme LightHouse, Wave ou encore GTmetrix. Projet très satisfaisant !"
-
+        "commentaire": "Ce projet m'a fait réalisé l'importance du SEO. Sans lui, un site est perdu dans l'océan d'internet, invisible pour des potentiels clients ! J'ai beaucoup apprécié voir les résultats de mon travail petit à petit... grâce aux outils comme LightHouse, Wave ou encore GTmetrix. Projet très satisfaisant !",
+        "difficultes": [
+            "Découverte de React",
+            "L'utilisation des hooks",
+            "La gestion de l'état des composants",
+            "Réaliser des animations selon l'état du composant"
+        ],
+        "pointsForts": [
+            "Gérer les routes avec React Router",
+            "Créer des routes dynamiques",
+            "Coder le caroussel d'images",
+            "Rendre le site responsive"
+        ]
     }
 ]

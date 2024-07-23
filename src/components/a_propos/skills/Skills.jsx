@@ -2,15 +2,18 @@ import './skills.scss';
 
 
 /* Icônes langages */
-import big3 from "../../../utils/assets/langages/html_css_js.png";
+import big3 from "../../../utils/assets/langages/html_css_js.webp";
 import sass from "../../../utils/assets/langages/sass.png";
 import react from "../../../utils/assets/langages/react.webp";
 import framerMotion from "../../../utils/assets/langages/framer_motion.svg";
-import git from "../../../utils/assets/langages/git.webp";
-import github from "../../../utils/assets/langages/github.png";
+import git from "../../../utils/assets/langages/git.png";
+import github from "../../../utils/assets/langages/github.webp";
 import nodeJS from "../../../utils/assets/langages/node_js.png";
 import mongoDB from "../../../utils/assets/langages/Mongodb.png";
 import expressJS from "../../../utils/assets/langages/express_js.png";
+import vscode from "../../../utils/assets/langages/vscode.svg";
+import figma from "../../../utils/assets/langages/figma.png";
+import gimp from "../../../utils/assets/langages/gimp.webp";
 
 
 function Skills()
@@ -27,7 +30,7 @@ function Skills()
   <tbody>
     <tr>
       <td><img src={big3} title="JavaScript - HTML - CSS" alt="JavaScript - HTML - CSS" /> HTML - CSS - JavaScript</td>
-      <td> VS Code</td>
+      <td><img src={vscode} title="VS Code" alt="VS Code" /> VS Code</td>
       <td>Méthode Agile/Scrum</td>
     </tr>
     <tr>
@@ -42,12 +45,12 @@ function Skills()
     </tr>
     <tr>
       <td><img src={nodeJS} title="Node.js" alt="Node.js" id="small" /> Node.js</td>
-      <td> Figma</td>
+      <td><img src={figma} title="Figma" alt="Figma" /> Figma</td>
       <td> Optimisation des performances</td>
     </tr>
     <tr>
       <td><img src={mongoDB} title="Mongo DB" alt="Mongo DB" id="small" /> MongoDB</td>
-      <td> GIMP</td>
+      <td><img src={gimp} title="GIMP" alt="GIMP" /> GIMP</td>
       <td> REST API</td>
     </tr>
     <tr>

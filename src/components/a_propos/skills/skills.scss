@@ -16,6 +16,8 @@ table
     th
     {
         font-size: 35px;
+        display: flex;
+        justify-content: center;
     }
 
     th, td 
@@ -35,9 +37,9 @@ table
     
     td img 
     {
-        width: 100px;
+        width: 85px;
+        max-height: 100px;
         height: auto;
-        vertical-align: middle;
         margin-right: 20px;
         filter: grayscale(100%);
         cursor: pointer;

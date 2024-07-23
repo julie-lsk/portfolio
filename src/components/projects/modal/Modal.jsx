@@ -1,7 +1,10 @@
 import "./modal.scss";
-import github from "../../../utils/assets/langages/github.png";
-import croix from "../../../utils/assets/croix.svg";
 import { motion, AnimatePresence } from "framer-motion";
+import github from "../../../utils/assets/langages/github.webp";
+import croix from "../../../utils/assets/croix.svg";
+import fire from "../../../utils/assets/fire.svg";
+import star from "../../../utils/assets/star.svg";
+import avis from "../../../utils/assets/avis.png";
 
 
 function Modal({ isModalOpen, onClose, isClosing, project })
@@ -48,7 +51,36 @@ function Modal({ isModalOpen, onClose, isClosing, project })
             
             <div id="modal-body">
               <h4>{project.title}</h4>
-              <p>Voici quelques images en plus sous plusieurs formats</p>
+              
+              <p id="intro">Je vais vous expliquer ici les difficultés que j'ai recontré, ce que j'ai adoré coder ainsi que quelques mockup en plus. <br />
+              N'hésitez pas à cliquer sur le lien vers GitHub tout en bas !</p>
+
+              <span/>
+
+              <div className="com-wrapper">
+
+                <ul> <img src={fire} alt="Icône flamme"/> Ce qui était difficile : 
+                  {project.difficultes.map((i, index) =>
+                  (
+                    <li key={index}>{i}</li>
+                  ))}
+                </ul>
+
+                <ul> <img src={star} alt="Icône étoile"/> Ce que j'ai apprécié :
+                  {project.pointsForts.map((i, index) =>
+                  (
+                    <li key={index}>{i}</li>
+                  ))}
+                </ul>
+              
+              </div>
+              
+              <p id="avis"> <img src={avis} alt="Icône avis - crédit : https://www.flaticon.com/fr/icones-gratuites/smileys"/>Mon avis sur le projet : </p>
+              <p className="commentaire">{project.commentaire}</p>
+
+              <span/>
+              
+              <p>Voici d'autres aperçu du site sous différents formats :</p>
 
               <div className="mockup-wrapper">
                 {project.mockup.map((p, index) =>
@@ -57,12 +89,11 @@ function Modal({ isModalOpen, onClose, isClosing, project })
                 ))}
               </div>
               
-              <p id="avis">Mon avis sur le projet : </p>
-              <p className="commentaire">{project.commentaire}</p>
+              <div className="github">
+                <p>Cliquez sur le logo de GitHub pour découvrir mon code !</p>
+                <a href={project.github} target="_blank" rel="noopener noreferrer"><img src={github} alt={`Logo GitHub avec lien vers le projet ${project.title}`} className="lien-github"></img></a>
+              </div>
 
-              <p>Cliquez sur le logo de GitHub pour découvrir mon code !</p>
-
-              <a href={project.github} target="_blank" rel="noopener noreferrer"><img src={github} alt={`Logo GitHub avec lien vers le projet ${project.title}`} className="github"></img></a>
             </div>
 
           </motion.div>

@@ -1,11 +1,9 @@
-import { useRef, useState } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import "./project.scss";
 import Modal from "../modal/Modal";
+import arrowLeft from '../../../utils/assets/arrow_left.webp';
 
-
-
-// const yBirds = useTransform(scrollYProgress, [0, 1], [2000, -2000]); 
 
 
 const Project = ({project}) =>
@@ -28,16 +26,6 @@ const Project = ({project}) =>
             document.body.classList.remove('modal-open');
         }, 300);
     };
-    
-    /********** Animation **********/
-    const ref = useRef();
-
-    const {scrollYProgress} = useScroll({
-        target: ref,
-    });
-
-    const yInfos = useTransform(scrollYProgress, [0, 1], [-150, 150]);
-    
 
 
     return (
@@ -46,27 +34,35 @@ const Project = ({project}) =>
             <div className="wrapper">
             
                 <button onClick={(event) => openModal(event)}>
-                    <img src={project.img} ref={ref} alt={`Mockup du projet ${project.title}`} className="mockup" />
+                    <img src={project.img} alt={`Mockup du projet ${project.title}`} className="mockup" />
                 </button>
 
 
                 <Modal isModalOpen={isModalOpen} onClose={closeModal} isClosing={isClosing} project={project} />
 
 
-                <motion.div className='infos-wrapper' style={{y: yInfos}}>
+                <motion.div className='infos-wrapper'>
 
-                    <h4>{project.title}</h4>
+                    <div className="title-wrapper">
+                        <h4>{project.title}</h4>
+
+                        <div className='language-wrapper'>
+                            {project.languages.map((language, index) => (
+                                <img src={language} alt="Langage de programmation/outil/compétence utilisé" key={index} />
+                            ))}
+                        </div>
+                    </div>
+                    
                     <p>{project.description}</p>
 
-                    <div className='language-wrapper'>
-                        {project.languages.map((language, index) => (
-                            <img src={language} alt="Langage de programmation/outil/compétence utilisé" key={index} />
-                        ))}
+                    <div className="arrow">
+                        <img src={arrowLeft} alt="Flèche pointée vers la gauche" />
+                        Cliquez sur l'image pour en savoir plus !
                     </div>
 
-                </motion.div>
+                    
 
-                {/* <motion.div style={{y: yBirds}} className="birds"></motion.div> */}
+                </motion.div>
 
             </div>
 

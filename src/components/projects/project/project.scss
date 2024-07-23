@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100dvh;
+    height: 75dvh;
     color: rgb(80, 85, 90);
     font-size: 2em;
 
@@ -13,7 +13,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        max-width: 75%; /* 1366px */
+        max-width: 60%;
         height: 100%;
         margin: auto;
         gap: 50px;
@@ -36,7 +36,7 @@
         {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
             height: max-content;
             flex: 1; /* pour avoir la même taille que l'img */
 
@@ -44,32 +44,59 @@
             {
                 font-size: 1.5em;
                 font-weight: 600;
-                padding-bottom: 30px;
             }
 
             p
             {
                 width: 100%;
-                padding-bottom: 30px;
                 text-align: justify;
             }
 
-            
+            .title-wrapper
+            {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin-bottom: 50px;
 
-            .language-wrapper
+                .language-wrapper
+                {
+                    display: flex;
+                    align-items: center;
+                    gap: 50px;
+
+                    img /* langages */
+                    {
+                        width: 100%;
+                        min-height: 35px;
+                        max-width: 100px;
+                        min-width: 70px;
+                    }
+                }
+            }
+
+            .arrow
             {
                 display: flex;
                 align-items: center;
-                gap: 50px;
-                height: max-content;
-                padding-bottom: 50px;
+                gap: 30px;
+                margin: 50px 0;
 
-                img /* langages */
+                img
                 {
-                    width: 15%;
-                    min-height: 35px;
-                    max-width: 160px;
-                    min-width: 70px;
+                    width: auto;
+                    height: 37px;
+                    margin-left: 5px;
+                    opacity: 70%;
+                    animation: moveLeftRight 1.5s ease-in-out infinite;
+                }
+    
+                @keyframes moveLeftRight 
+                {
+                    0%, 100% {transform: translateX(0);}
+                    50% {transform: translateX(15px);}
                 }
             }
         }
