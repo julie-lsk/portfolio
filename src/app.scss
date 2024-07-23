@@ -14,35 +14,8 @@ body
     color: white;
 }
 
-body.modal-open 
-{
-    overflow: hidden;
-}
-
 a
 {
     text-decoration: none;
     color: inherit; /* prend la couleur du parent (body donc white) */
-}
-
-section
-{
-    height: 100dvh;
-}
-
-
-/********** Animation Vanta.js **********/
-#vanta
-{
-    width: 100%;
-    height: 100dvh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.vanta-canvas
-{
-    pointer-events: none !important;
 }

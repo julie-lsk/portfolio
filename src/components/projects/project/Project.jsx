@@ -4,6 +4,10 @@ import "./project.scss";
 import Modal from "../modal/Modal";
 
 
+
+// const yBirds = useTransform(scrollYProgress, [0, 1], [2000, -2000]); 
+
+
 const Project = ({project}) =>
 {
     /********** Modale **********/
@@ -61,6 +65,8 @@ const Project = ({project}) =>
                     </div>
 
                 </motion.div>
+
+                {/* <motion.div style={{y: yBirds}} className="birds"></motion.div> */}
 
             </div>
 

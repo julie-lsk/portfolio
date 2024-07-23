@@ -38,7 +38,7 @@
     {
         "id": 3,
         "title": "Nina Carducci - photographe",
-        "description": "3 audits ont été réalisé : un audit SEO, un audit de performance et un audit d'accessibilité. Le but était d'évaluer la visibilité, les forces et faiblesses en terme de référencement, la performance et l'efficacité du site ainsi que son accessibilité pour les utilisateurs de technologies d'assistance. Des bugs ont également été corrigés. Le site de Nina est finalement fluide, les images sont de qualités et il est accessible à tous !",
+        "description": "3 audits ont été réalisé : un audit SEO, un audit de performance et un audit d'accessibilité. Le but était d'évaluer la visibilité, les forces et faiblesses en terme de référencement, la performance et l'efficacité du site ainsi que son accessibilité pour les utilisateurs de technologies d'assistance.",
         "img": "./Carducci/carducci_mockup_final.png",
         "languages": [
             "./langages/seo.png",

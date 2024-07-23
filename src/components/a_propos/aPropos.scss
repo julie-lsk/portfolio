@@ -8,33 +8,26 @@
 {
     position: relative;
     width: 100%;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 120dvh;
     // background: linear-gradient(180deg, rgba(112,221,214,1) 28%, rgba(200,235,220,1) 100%);
     background: linear-gradient(180deg, rgba(57,183,231,1) 36%, rgb(114, 230, 238) 96%);
     overflow: hidden;
-
-    h3
-    {
-        font-size: 2.5vw;
-        font-weight: 600;
-        margin-left: 5%;
-        z-index: 4;
-    }
-
 
     .flex
     {
         height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
 
         .description
         {
+            height: auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             z-index: 4;
             margin-right: 5%;
             margin-left: 5%;
@@ -43,9 +36,17 @@
             text-align: justify;
             overflow: hidden;
 
+            h3
+            {
+                font-size: 70px;
+                font-weight: 600;
+                margin-bottom: 5%;
+                z-index: 4;
+            }
+
             p
             {
-                font-size: 1.5vw;
+                font-size: 40px;
                 font-weight: 400;
             }
 
@@ -54,82 +55,69 @@
                 font-weight: 600;
             }
         
-            #space /* escpace entre paragraaphes */
+            #space /* escpace entre paragraphes */
             {
                 margin-top: 30px;
             }
 
-            #contact-link, #cv/* balise a "me contacter */
+            a
             {
-                font-weight: 600;
-                color: white;
-                text-decoration: none;
-                position: relative;
-            }
-
-            /* Aide animation : https://codepen.io/geoffgraham/pen/yLzvXyL */
-            #contact-link::before, #cv::before
-            {
-                background: rgba(82, 150, 179, 0.65);
-                content: "";
-                inset: 0;
                 position: absolute;
-                transform: scaleX(0);
-                transform-origin: right;
-                transition: transform 0.5s ease-in-out;
-                z-index: -1;
             }
 
-            #contact-link:hover::before, #cv:hover::before
+            a img
             {
-                transform: scaleX(1);
-                transform-origin: left;
+                width: 150px;
+                filter: invert(1);
             }
+
+            .email-svg, #Layer_2
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            margin: auto;
+            pointer-events: none;
+        }
         }
 
-        .skills-wrapper 
+        .skills-container
         {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            grid-column-gap: 15px;
-            grid-row-gap: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            width: 60%;
-            height: auto;
-            z-index: 3;
             margin-right: 5%;
-            margin-left: 5%;
-            overflow: hidden;
-            -webkit-backdrop-filter: blur(7px);
-            backdrop-filter: blur(7px);
+            width: 50%;
+            height: auto;
+            max-width: 1100px;
 
-            #small
+            h3
             {
-                width: 70%;
+                font-size: 70px;
+                font-weight: 600;
+                margin-bottom: 5%;
+                z-index: 4;
             }
 
-            #big
+            .skills-wrapper 
             {
-                width: 45%;
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-column-gap: 15px;
+                grid-row-gap: 15px;
+                align-items: center;
+                
+                height: auto;
+                z-index: 3;
+                margin-right: 5%;
+                margin-left: 5%;
+                overflow: hidden;
+                -webkit-backdrop-filter: blur(7px);
+                backdrop-filter: blur(7px);
             }
-        }
-
-        img /* langages */
-        {
-            width: 60%;
-            height: max-content;
-            filter: grayscale(100%);
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        img:hover
-        {
-            filter: none;
-            transition: filter 0.2s ease-in-out;
-            transform: scale(1.1);
         }
     }
    
@@ -145,6 +133,7 @@
         position: absolute;
         top: -15vh;
         z-index: 3;
+        pointer-events: none;
     }
 
     .nuage-2
@@ -156,8 +145,9 @@
         width: 70%;
         height: 100%;
         position: absolute;
-        bottom: -45vh;
+        bottom: -30vh;
         z-index: 2;
+        pointer-events: none;
     }
 
     .nuage-3
@@ -170,6 +160,7 @@
         height: 100%;
         position: absolute;
         z-index: 2;
+        pointer-events: none;
     }
 
     // .birds
