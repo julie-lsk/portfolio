@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Kasa - agence immobilière",
-        "description": "Site de location d'appartement responsive avec un caroussel d'images pour découvrir les logements, avec également des petites animations.",
+        "description": "Site de location d'appartement responsive avec un carrousel d'images pour découvrir les logements, avec également des petites animations.",
         "img": "./Kasa/kasa_mockup.webp",
         "languages": [
             "./langages/react.webp",
@@ -14,7 +14,7 @@
             "./Kasa/mockup_tel.webp",
             "./Kasa/mockup_desktop.webp"
         ],
-        "commentaire": "Premier projet codé en React ! Challenge très intéréssant, de par la découverte de nouvelles fonctionnalités/pratiques et de par le responsive (géré avec les média Queries). Il m'a beaucoup plu et est très inspirant pour la suite.",
+        "commentaire": "Premier projet codé en React ! Challenge très intéressant, de par la découverte de nouvelles fonctionnalités/pratiques et de par le responsive (géré avec les média Queries). Il m'a beaucoup plu et est très inspirant pour la suite.",
         "difficultes": [
             "Découverte de React",
             "L'utilisation des hooks",
@@ -44,18 +44,17 @@
             "./MVG/mockup_tel.webp",
             "./MVG/mockup_desktop.webp"
         ],
-        "commentaire": "Projet très intéréssant à coder ! Grâce à ce projet complet, j'ai totalement découvert le back, avec les opérations du CRUD, gérer les erreurs, l'authentification, les contrôleurs, les middlewares... J'ai également découvert pleins d'outils ou librairies comme bcrypt, Mongoose, JWT, dotenv (pour MDP de la BDD), multer et sharp pour gérer les images entrantes... ect. J'ai hâte de refaire un projet similaire !",
+        "commentaire": "Projet très intéressant à coder ! Grâce à ce projet complet, j'ai totalement découvert le back, avec les opérations du CRUD, gérer les erreurs, l'authentification, les contrôleurs, les middlewares... J'ai également découvert plein d'outils ou librairies comme bcrypt, Mongoose, JWT, dotenv (pour MDP de la BDD), multer et sharp pour gérer les images entrantes... ect. J'ai hâte de refaire un projet similaire !",
         "difficultes": [
             "La configuration du serveur Express",
-            "La découverte de Mongo DB",
+            "Gérer le système de notation des livres",
             "Implémenter les opérations du CRUD et gérer les erreurs",
             "Suivre le cahier des charges et les spécifications fonctionnelles"
         ],
         "pointsForts": [
-            
+            "La découverte de Mongo DB",
             "Créer un système d'authentification",
             "Optimiser la qualité des images chargées",
-            "Gérer le système de notation des livres",
             "Créer des modèles de données pour la BDD"
         ]
     },
@@ -74,18 +73,17 @@
             "./Carducci/mockup_tel.webp",
             "./Carducci/mockup_desktop.webp"
         ],
-        "commentaire": "Ce projet m'a fait réalisé l'importance du SEO. Sans lui, un site est perdu dans l'océan d'internet, invisible pour des potentiels clients ! J'ai beaucoup apprécié voir les résultats de mon travail petit à petit... grâce aux outils comme LightHouse, Wave ou encore GTmetrix. Projet très satisfaisant !",
+        "commentaire": "Ce projet m'a fait réaliser l'importance du SEO. Sans lui, un site est perdu dans l'océan d'internet, invisible pour des potentiels clients ! J'ai beaucoup apprécié voir les résultats de mon travail petit à petit... grâce aux outils comme LightHouse, Wave ou encore GTmetrix. Projet très satisfaisant !",
         "difficultes": [
-            "Découverte de React",
-            "L'utilisation des hooks",
-            "La gestion de l'état des composants",
-            "Réaliser des animations selon l'état du composant"
+            "Répertorier toutes les modifications dans un rapport",
+            "Diminuer le poids des images sans perdre leurs qualités",
+            "Réalisation d'audits précis avant et après les modifications"
         ],
         "pointsForts": [
-            "Gérer les routes avec React Router",
-            "Créer des routes dynamiques",
-            "Coder le caroussel d'images",
-            "Rendre le site responsive"
+            "Voir la progression du site (fluidité, accessibilité, performances, référencement)",
+            "Améliorer la sémantique du code HTML",
+            "Débugger des fonctionnalités",
+            "L'utilisation des outils comme Lighthouse et Wave"
         ]
     }
 ]
