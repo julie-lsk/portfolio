@@ -34,13 +34,13 @@ function Loader()
 
         <motion.aside 
             className="body-loader"
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+            
             >
 
-            <div className="container">
+            <motion.div className="container" variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit">
                 
                 <div className="h1-container">
 
@@ -216,7 +216,7 @@ function Loader()
 
                 </div>
                 
-            </div>
+            </motion.div>
 
         </motion.aside>
 

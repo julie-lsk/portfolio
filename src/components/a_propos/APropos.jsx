@@ -2,8 +2,8 @@ import { useRef } from "react";
 import {motion, useScroll, useTransform, } from "framer-motion";
 import "./APropos.scss";
 import Skills from './skills/Skills';
-import contact from '../../utils/assets/email.svg';
-import cv from '../../utils/assets/cv.svg';
+import contact from '../../utils/assets/email.webp';
+import cv from '../../utils/assets/cv.webp';
 
 
 function APropos()
@@ -16,12 +16,10 @@ function APropos()
         offset: ["start end", "end start"] /* l'animation démarre au top de la vue de l'utilisateur, + s'arrête au bottom  */
     })
 
-    // const yText = useTransform(scrollYProgress, [0, 1], ["500%", "700%"]);
-
     /* Suit le scroll en Y et le transforme en X grâce au style dans la motion.div */
     const xNuage1 = useTransform(scrollYProgress, [0, 1], ["-50%", "150%"]); 
-    const xNuage2 = useTransform(scrollYProgress, [0, 1], ["150%", "-200%"]); 
-    const xNuage3 = useTransform(scrollYProgress, [0, 1], ["-100%", "200%"]); 
+    const xNuage2 = useTransform(scrollYProgress, [0, 1], ["100%", "-100%"]); 
+    const xNuage3 = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]); 
     const yBirds = useTransform(scrollYProgress, [0, 1], ["500%", "-100%"]); 
 
     return (
@@ -50,7 +48,7 @@ function APropos()
                     <p className="space">Hâte de pouvoir en discuter avec vous !</p>
 
                     <a href="#Contact">
-                        <img src={contact} alt="Icône mail" id="icon" ></img>
+                        <img src={contact} alt="Icône mail" id="icon-contact" ></img>
                     </a>
                     
                 </div>
@@ -64,7 +62,7 @@ function APropos()
                     <p>Vous pouvez aussi télécharger mon CV :</p>
 
                     <a href="./cv_julie_lausecker.pdf" download>
-                        <img src={cv} alt="Icône CV" id="icon" ></img>
+                        <img src={cv} alt="Icône CV" id="icon-cv" ></img>
                     </a>
                     
                 </div>

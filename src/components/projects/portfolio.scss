@@ -30,4 +30,32 @@
             background-color: white;
         }
     }
+
+    .nuage
+    {
+        background-image: url("../../utils/assets/clouds_2.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 1800px;
+        height: 450px;
+        position: absolute;
+        bottom: 58%;
+        left: 250px;
+        pointer-events: none;
+    }
+
+    .avion
+    {
+        background-image: url("../../utils/assets/avion.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 800px;
+        height: 450px;
+        position: absolute;
+        bottom: 15%;
+        right: 3%;
+        pointer-events: none;
+    }
 }

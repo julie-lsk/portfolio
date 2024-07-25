@@ -60,8 +60,6 @@ const Project = ({project}) =>
                         Cliquez sur l'image pour en savoir plus !
                     </div>
 
-                    
-
                 </motion.div>
 
             </div>

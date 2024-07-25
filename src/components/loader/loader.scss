@@ -9,6 +9,14 @@ $scale: 1;
 $duration: 2.9s;
 $timingFunction: ease;
 
+aside
+{
+  position: relative;
+  overflow-x: hidden;
+  height:100dvh;
+  width:100vw;
+}
+
 .body-loader 
 {
   display:flex;
@@ -18,7 +26,6 @@ $timingFunction: ease;
   width:100vw;
   margin:0;
   padding:0;
-  background-color: rgba(255, 255, 255, 0.8);
   overflow: hidden;
 }
 
@@ -31,6 +38,7 @@ $timingFunction: ease;
 
 .cube {
   position:absolute;
+  margin: auto;
   width:86px;
   height:100px;
 }

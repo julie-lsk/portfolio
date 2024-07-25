@@ -3,16 +3,16 @@ import './skills.scss';
 
 /* Icônes langages */
 import big3 from "../../../utils/assets/langages/html_css_js.webp";
-import sass from "../../../utils/assets/langages/sass.png";
+import sass from "../../../utils/assets/langages/sass.webp";
 import react from "../../../utils/assets/langages/react.webp";
-import framerMotion from "../../../utils/assets/langages/framer_motion.svg";
-import git from "../../../utils/assets/langages/git.png";
+import framerMotion from "../../../utils/assets/langages/framer_motion.webp";
+import git from "../../../utils/assets/langages/git.webp";
 import github from "../../../utils/assets/langages/github.webp";
-import nodeJS from "../../../utils/assets/langages/node_js.png";
-import mongoDB from "../../../utils/assets/langages/Mongodb.png";
-import expressJS from "../../../utils/assets/langages/express_js.png";
-import vscode from "../../../utils/assets/langages/vscode.svg";
-import figma from "../../../utils/assets/langages/figma.png";
+import nodeJS from "../../../utils/assets/langages/node_js.webp";
+import mongoDB from "../../../utils/assets/langages/Mongodb.webp";
+import expressJS from "../../../utils/assets/langages/express_js.webp";
+import vscode from "../../../utils/assets/langages/vscode.webp";
+import figma from "../../../utils/assets/langages/figma.webp";
 import gimp from "../../../utils/assets/langages/gimp.webp";
 
 
@@ -56,7 +56,7 @@ function Skills()
     <tr>
       <td><img src={expressJS} title="Express.js" alt="Express.js" id="small" /> ExpressJS</td>
       <td><img src={framerMotion} title="Framer-motion" alt="Framer-motion" /> Framer Motion</td>
-      <td> Accessibilité web</td>
+      <td> Intégration de maquette</td>
     </tr>
   </tbody>
 </table>

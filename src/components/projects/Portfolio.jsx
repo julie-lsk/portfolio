@@ -1,4 +1,4 @@
-import {motion, useScroll, useSpring} from 'framer-motion';
+import {motion, useScroll, useSpring, useTransform} from 'framer-motion';
 import { useRef } from 'react';
 import "./portfolio.scss";
 import projects from "../../data/projects.json";
@@ -15,10 +15,20 @@ function Portfolio()
         offset: ["end end", "start start"],
     });
 
+    const {scrollYProgress: scrollAnimation} = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    })
+
+
+    // Paramétrage des animations :
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
-    })
+    });
+
+    const xNuage = useTransform(scrollAnimation, [0, 1], ["-50%", "50%"]);
+    const yAvion = useTransform(scrollAnimation, [0, 1], ["-400%", "100%"]);
 
 
     return (
@@ -37,6 +47,9 @@ function Portfolio()
             {projects.map((project) => (
                 <Project project={project} key={project.id} /> 
             ))}
+
+            <motion.div style={{x: xNuage}} className="nuage"></motion.div>
+            <motion.div style={{y: yAvion}} className="avion"></motion.div>
 
         </div>
 

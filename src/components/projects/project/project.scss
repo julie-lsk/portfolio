@@ -1,5 +1,6 @@
 .container-project
 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,6 +8,7 @@
     height: 75dvh;
     color: rgb(80, 85, 90);
     font-size: 2em;
+    z-index: 10;
 
     .wrapper
     {
@@ -69,10 +71,9 @@
 
                     img /* langages */
                     {
-                        width: 100%;
-                        min-height: 35px;
-                        max-width: 100px;
-                        min-width: 70px;
+                        width: 100px;
+                        height: auto;
+                        min-height: 40px;
                     }
                 }
             }
@@ -102,12 +103,3 @@
         }
     }
 }
-
-
-
-/********** Personnalisation des sections de projets **********/
-
-// .container-project:nth-child(3) FIXME:
-// {
-    
-// }

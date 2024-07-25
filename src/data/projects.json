@@ -6,7 +6,7 @@
         "img": "./Kasa/kasa_mockup.webp",
         "languages": [
             "./langages/react.webp",
-            "./langages/sass.png"
+            "./langages/sass.webp"
         ],
         "github": "https://github.com/julie-lsk/react_app_kasa.git",
         "mockup": [
@@ -34,9 +34,9 @@
         "description": "Cette librairie a décidé de créer un site pour référencer et noter des livres. Un système d'authentification a été mis en place pour permettre aux utilisateurs de noter, ajouter, modifier ou supprimer un livre (avec des restrictions). Uniquement la partie du backend a été réalisé ici.",
         "img": "./MVG/mvg_mockup_final.webp",
         "languages": [
-            "./langages/node_js.png",
-            "./langages/Mongodb.png",
-            "./langages/express_js.png"
+            "./langages/node_js.webp",
+            "./langages/Mongodb.webp",
+            "./langages/express_js.webp"
         ],
         "github": "https://github.com/julie-lsk/backend_mon_vieux_grimoire.git",
         "mockup": [
@@ -64,8 +64,8 @@
         "description": "3 audits ont été réalisé : un audit SEO, un audit de performance et un audit d'accessibilité. Le but était d'évaluer la visibilité, les forces et faiblesses en terme de référencement, la performance et l'efficacité du site ainsi que son accessibilité pour les utilisateurs de technologies d'assistance.",
         "img": "./Carducci/carducci_mockup_final.webp",
         "languages": [
-            "./langages/seo.png",
-            "./langages/accessibility.png"
+            "./langages/seo.webp",
+            "./langages/accessibility.webp"
         ],
         "github": "https://github.com/julie-lsk/seo_nina_carducci.git",
         "mockup": [
