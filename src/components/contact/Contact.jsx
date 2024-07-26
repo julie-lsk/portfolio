@@ -26,7 +26,7 @@ function Contact()
 {
     const ref = useRef();
 
-    const isInView = useInView(ref, {margin: "-100px"});
+    const isInView = useInView(ref);
 
     return (
         <motion.div ref={ref} variants={variants} className="contact" initial="initial" whileInView="animate">
@@ -62,7 +62,7 @@ function Contact()
                     transition={{delay: 3, duration: 1}}
                     >
 
-                    <svg strokeWidth="0.2" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg">
+                    <svg strokeWidth="0.2" viewBox="0 0 50 50" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <style>{`.cls-1{fill:none;stroke:#50555A;stroke-linecap:round;stroke-linejoin:round;}`}</style>
                         </defs>

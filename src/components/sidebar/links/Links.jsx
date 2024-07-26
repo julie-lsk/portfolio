@@ -15,7 +15,6 @@ const variants = {
     }
 }
 
-
 const itemsVariants = {
     open: {
         y: 0, /* quand ouvert = pas de décalage */
@@ -28,12 +27,12 @@ const itemsVariants = {
 }
 
 
-function Links({open})
+function Links()
 {
     const items = ["Accueil", "À propos","Portfolio","Contact"];
 
     return (
-        <motion.div className="links" variants={variants} style={!open ? {display:"none"} : ""}>
+        <motion.div className="links" variants={variants}>
             {items.map(item => (
                 <motion.a 
                     href={`#${item}`} 

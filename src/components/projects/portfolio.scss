@@ -3,6 +3,7 @@
     position: relative;
     // background: linear-gradient(180deg, rgba(199,235,220,1) 29%, rgba(255,200,117,1) 100%);
     background: linear-gradient(180deg, rgba(114,230,238,1) 36%, rgba(235,207,181,1) 96%);
+    overflow: hidden;
 
     .progress
     {
@@ -57,5 +58,18 @@
         bottom: 15%;
         right: 3%;
         pointer-events: none;
+
+        @media (max-width: 2200px) 
+        {
+            width: 700px;
+            height: 400px;
+            bottom: 20%;
+        }
+
+        @media (max-width: 1900px) 
+        {
+            width: 600px;
+            height: 400px;
+        }
     }
 }

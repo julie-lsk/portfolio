@@ -31,7 +31,7 @@
         }
         
         /* Animation : https://codepen.io/imagekit_io/pen/OJxapRm */
-        #icon:hover
+        #icon-cv:hover, #icon-contact:hover
         {
             /* Start the shake animation and make the animation last for 0.5 seconds */
             animation: vibrate 0.5s;
@@ -63,10 +63,23 @@
             justify-content: center;
             align-items: center;
             z-index: 4;
-            -webkit-backdrop-filter: blur(7px);
-            backdrop-filter: blur(7px);
             text-align: justify;
             overflow: hidden;
+
+            @media (max-width: 2200px) 
+            {
+                width: 60%;
+            }
+
+            @media (max-width: 1900px) 
+            {
+                width: 70%;
+            }
+
+            @media (max-width: 1600px) 
+            {
+                width: 70%;
+            }
 
             h3
             {
@@ -142,6 +155,16 @@
         bottom: 200px;
         z-index: 0;
         pointer-events: none;
+
+        @media (max-width: 2200px) 
+        {
+            left: -200px;
+        }
+
+        @media (max-width: 1900px) 
+        {
+            left: -600px;
+        }
     }
 
     .nuage-2
@@ -185,5 +208,12 @@
         top: 5%;
         z-index: 3;
         pointer-events: none;
+
+        @media (max-width: 1900px) 
+        {
+            width: 13%;
+            height: 13%;
+            top: -300px;
+        }
     }
 }

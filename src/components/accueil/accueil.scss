@@ -1,7 +1,7 @@
-@font-face {
+@font-face 
+{
     font-family: "Scarva";
-    src: url("../../../public/SCARVA.woff2");
-    font-display: swap;
+    src: url("../../../public/SCARVA.woff2") format('woff2');
 }
 
 .container-accueil
@@ -48,6 +48,21 @@
             letter-spacing: 5px;
             z-index: 3;
             animation: slideIn 1s ease-out forwards;
+
+            @media (max-width: 2200px) 
+            {
+                font-size: 180px;
+            }
+
+            @media (max-width: 1900px) 
+            {
+                font-size: 160px;
+            }
+
+            @media (max-width: 1600px) 
+            {
+                font-size: 140px;
+            }
         }
 
         h2
@@ -59,6 +74,25 @@
             border-bottom: 1px solid white;
             z-index: 3;
             animation: slideIn 1s ease-out forwards;
+
+            @media (max-width: 2200px) 
+            {
+                font-size: 140px;
+                padding: 10px 100px 0px 100px;
+            }
+
+            @media (max-width: 1900px) 
+            {
+                font-size: 130px;
+                padding: 10px 75px 0px 75px;
+                
+            }
+
+            @media (max-width: 1600px) 
+            {
+                font-size: 120px;
+                padding: 10px 45px 0px 45px;
+            }
         }
 
         h3
@@ -68,6 +102,21 @@
             font-size: 110px;
             padding: 27px;
             animation: slideIn 1s ease-out forwards;
+
+            @media (max-width: 2200px) 
+            {
+                font-size: 90px;
+            }
+
+            @media (max-width: 1900px) 
+            {
+                font-size: 80px;
+            }
+
+            @media (max-width: 1600px) 
+            {
+                font-size: 70px;
+            }
         }
 
         img
@@ -79,7 +128,7 @@
 
         .scroll-button
         {
-            animation: scrollButton 1.5s ease-out infinite;
+            animation: scrollButton 2s ease-out infinite;
         }
 
         @keyframes scrollButton 

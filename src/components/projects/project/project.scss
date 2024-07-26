@@ -20,6 +20,11 @@
         margin: auto;
         gap: 50px;
 
+        @media (max-width: 2200px) 
+        {
+            max-width: 80%;
+        }
+
         button
         {
             border: none;
@@ -62,6 +67,11 @@
                 align-items: flex-end;
                 justify-content: space-between;
                 margin-bottom: 50px;
+
+                @media (max-width: 2200px) 
+                {
+                    align-items: center;
+                }
 
                 .language-wrapper
                 {

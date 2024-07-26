@@ -35,7 +35,7 @@ function App()
       {isPending || isLoading ? ( <Loader setIsLoading={setIsLoading} /> ) : 
       (
 
-        <motion.div>
+        <div>
         
           <Navbar />
 
@@ -52,10 +52,8 @@ function App()
           <section id='Contact'>
             <Contact />
           </section>
-
-          <footer></footer>
           
-        </motion.div>
+        </div>
 
       )}
 

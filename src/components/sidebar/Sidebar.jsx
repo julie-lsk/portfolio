@@ -5,12 +5,6 @@ import Links from './links/Links';
 import ToggleButton from './toggleButton/ToggleButton';
 
 
-
-
-function Sidebar()
-{
-    const [open, setOpen] = useState(false);
-
 const variants = 
 {
     open: {
@@ -31,14 +25,20 @@ const variants =
     }
 };
 
+
+
+function Sidebar()
+{
+    const [open, setOpen] = useState(false);
+
     return (
         <motion.div className='sidebar' animate={open ? "open" : "closed"}> 
         
             <motion.div className="background" variants={variants}> {/* paramètre l'ouverture/fermeture de la sidebar selon div "sidebar" */}
-                <Links open={open} />
+                <Links />
             </motion.div>
 
-            <ToggleButton setOpen={setOpen} open={open}/>
+            <ToggleButton setOpen={setOpen} open={open} />
 
         </motion.div>
     )
