@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 @font-face 
 {
     font-family: "Scarva";
@@ -63,6 +65,11 @@
             {
                 font-size: 140px;
             }
+
+            @include desktop
+            {
+                font-size: 120px;
+            }
         }
 
         h2
@@ -78,7 +85,7 @@
             @media (max-width: 2200px) 
             {
                 font-size: 140px;
-                padding: 10px 100px 0px 100px;
+                padding: 10px 110px 0px 110px;
             }
 
             @media (max-width: 1900px) 
@@ -92,6 +99,11 @@
             {
                 font-size: 120px;
                 padding: 10px 45px 0px 45px;
+            }
+
+            @include desktop
+            {
+                font-size: 100px;
             }
         }
 
@@ -117,13 +129,28 @@
             {
                 font-size: 70px;
             }
+
+            @include desktop
+            {
+                font-size: 60px;
+            }
         }
 
-        img
+        img /* scroll button */
         {
             width: 4%;
             height: auto;
             filter: invert(1); /* noir ==> blanc */
+
+            @media (max-width: 1900px) 
+            {
+                width: 5%;
+            }
+
+            @media (max-width: 1600px) 
+            {
+                width: 6%;
+            }
         }
 
         .scroll-button

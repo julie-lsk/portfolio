@@ -1,6 +1,7 @@
+@import "../../../app.scss";
+
 .container-project
 {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +9,11 @@
     height: 75dvh;
     color: rgb(80, 85, 90);
     font-size: 2em;
-    z-index: 10;
+
+    @include desktop
+    {
+        margin: 100px 0;
+    }
 
     .wrapper
     {
@@ -19,10 +24,18 @@
         height: 100%;
         margin: auto;
         gap: 50px;
+        z-index: 1;
 
         @media (max-width: 2200px) 
         {
             max-width: 80%;
+        }
+
+        @include desktop
+        {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         button
@@ -51,12 +64,22 @@
             {
                 font-size: 1.5em;
                 font-weight: 600;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 40px;
+                }
             }
 
             p
             {
                 width: 100%;
                 text-align: justify;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 30px;
+                }
             }
 
             .title-wrapper
@@ -73,6 +96,12 @@
                     align-items: center;
                 }
 
+                @include desktop
+                {
+                    height: auto;
+                    margin-bottom: 0;
+                }
+
                 .language-wrapper
                 {
                     display: flex;
@@ -84,6 +113,11 @@
                         width: 100px;
                         height: auto;
                         min-height: 40px;
+
+                        @media (max-width: 1600px) 
+                        {
+                            width: 80px;
+                        }
                     }
                 }
             }
@@ -94,6 +128,16 @@
                 align-items: center;
                 gap: 30px;
                 margin: 50px 0;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 30px;
+                }
+
+                @include desktop
+                {
+                    margin: 0;
+                }
 
                 img
                 {

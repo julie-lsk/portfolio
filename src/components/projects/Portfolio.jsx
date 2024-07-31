@@ -1,14 +1,55 @@
 import {motion, useScroll, useSpring, useTransform} from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import "./portfolio.scss";
 import projects from "../../data/projects.json";
 import Project from "./project/Project";
+
+
+/* Retire animation sur nuage si écran trop petit */
+function useIsTablet()
+{
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+        const checkIsTablet = () => {
+            setIsTablet(window.innerWidth <= 2200)
+        };
+
+        checkIsTablet();
+        window.addEventListener("resize", checkIsTablet);
+
+        return () => window.removeEventListener("resize", checkIsTablet)
+    }, []);
+
+    return isTablet;
+}
+
+/* Retire animation sur avion */
+function useIsSmall()
+{
+    const [isSmall, setIsSmall] = useState(false);
+
+    useEffect(() => {
+        const checkIsSmall = () => {
+            setIsSmall(window.innerWidth <= 1600)
+        };
+
+        checkIsSmall();
+        window.addEventListener("resize", checkIsSmall);
+
+        return () => window.removeEventListener("resize", checkIsSmall)
+    }, []);
+
+    return isSmall;
+}
 
 
 
 function Portfolio()
 {
     const ref = useRef();
+    const isTablet = useIsTablet();
+    const isSmall = useIsSmall();
 
     const {scrollYProgress} = useScroll({
         target: ref,
@@ -27,8 +68,16 @@ function Portfolio()
         damping: 30,
     });
 
-    const xNuage = useTransform(scrollAnimation, [0, 1], ["-50%", "50%"]);
-    const yAvion = useTransform(scrollAnimation, [0, 1], ["-400%", "100%"]);
+    const yAvion = useTransform(scrollAnimation, [0, 1], ["-200%", "10%"]);
+    const xNuage = useTransform(scrollAnimation, [0, 1], ["-50%", "0%"]);
+
+    const nuageStyle = isTablet 
+    ? {x: "0%"}
+    : {x: xNuage};
+
+    const avionStyle = isSmall 
+    ? {y: "0%"}
+    : {y: yAvion};
 
 
     return (
@@ -48,8 +97,8 @@ function Portfolio()
                 <Project project={project} key={project.id} /> 
             ))}
 
-            <motion.div style={{x: xNuage}} className="nuage"></motion.div>
-            <motion.div style={{y: yAvion}} className="avion"></motion.div>
+            <motion.div style={nuageStyle} className="nuage"></motion.div>
+            <motion.div style={avionStyle} className="avion"></motion.div>
 
         </div>
 

@@ -22,7 +22,7 @@ function Modal({ isModalOpen, onClose, isClosing, project })
           onClick={onClose}
           >
 
-          <motion.div 
+          <motion.aside
             className="modal-content"
             role="dialog"
             aria-modal="true"
@@ -96,7 +96,7 @@ function Modal({ isModalOpen, onClose, isClosing, project })
 
             </div>
 
-          </motion.div>
+          </motion.aside>
 
         </motion.div>
       )}

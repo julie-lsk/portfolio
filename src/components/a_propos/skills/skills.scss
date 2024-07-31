@@ -1,3 +1,5 @@
+@import '../../../app.scss';
+
 table
 {
     width: 100%;
@@ -7,6 +9,16 @@ table
     font-size: 30px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1600px) 
+    {
+        min-width: 900px;
+    }
+
+    @include desktop 
+    {
+        max-width: 800px;
+    }
 
     tr
     {

@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .sidebar
 {
     display: flex;
@@ -5,7 +7,6 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    color: black;
 
     .background 
     {
@@ -15,6 +16,12 @@
         bottom: 0;
         width: 400px;
         background: white;
+        z-index: 999;
+
+        // @include desktop  /* FIXME: :( */
+        // {
+        //     width: 350px;
+        // }
 
         .links
         {
@@ -33,21 +40,27 @@
                 font-size: 40px;
                 line-height: 3;
                 font-weight: 500;
+
+                @include desktop
+                {
+                    font-size: 35px;
+                }
             }
         }
     }
 
     button 
     {
+        position: fixed;
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        position: fixed;
-        top: 55px;
-        right: 65px;
+        right: 50px;
+        top: 50px;
         background-color: transparent;
         border: none;
         cursor: pointer;
+        z-index: 999;
 
         svg
         {

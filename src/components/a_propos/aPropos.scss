@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .APropos
 {
     position: relative;
@@ -28,6 +30,12 @@
             width: 90px;
             height: 110px;
             filter: invert(100%);
+
+            @media (max-width: 1600px) 
+            {
+                width: 80px;
+                height: 100px;
+            }
         }
         
         /* Animation : https://codepen.io/imagekit_io/pen/OJxapRm */
@@ -87,12 +95,22 @@
                 font-weight: 600;
                 margin-bottom: 100px;
                 z-index: 4;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 50px;
+                }
             }
 
             p
             {
                 font-size: 40px;
                 font-weight: 400;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 35px;
+                }
             }
 
             strong
@@ -131,6 +149,11 @@
                 font-weight: 600;
                 margin-bottom: 100px;
                 z-index: 4;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 50px;
+                }
             }
 
             p
@@ -138,6 +161,11 @@
                 font-size: 40px;
                 margin-top: 80px;
                 margin-bottom: 30px;
+
+                @media (max-width: 1600px) 
+                {
+                    font-size: 35px;
+                }
             }
         }
     }
@@ -165,6 +193,16 @@
         {
             left: -600px;
         }
+
+        @media (max-width: 1600px) 
+        {
+            left: -500px;
+        }
+
+        @include desktop
+        {
+            font-size: 60px;
+        }
     }
 
     .nuage-2
@@ -179,6 +217,13 @@
         top: 46%;
         z-index: 2;
         pointer-events: none;
+
+        @media (max-width: 1900px) 
+        {
+            right: 400px;
+            width: 1800px;
+            height: 300px;
+        }
     }
 
     .nuage-3
@@ -193,6 +238,24 @@
         position: absolute;
         z-index: 2;
         pointer-events: none;
+
+        @media (max-width: 1900px) 
+        {
+            left: -200px;
+            width: 1200px;
+            height: 250px;
+        }
+
+        @media (max-width: 1600px) 
+        {
+            left: 200px;
+        }
+
+        @include desktop
+        {
+            top: 20px;
+            left: 150px;
+        }
     }
 
     .birds

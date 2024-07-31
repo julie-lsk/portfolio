@@ -15,7 +15,6 @@ const Project = ({project}) =>
     const openModal = (event) => {
         event.preventDefault(); /* évite que la modale soit ouverte tout en haut de la page */
         setIsModalOpen(true);
-        document.body.classList.add('modal-open'); /* pour overflow: hidden; = empêche scroll qd la modale est ouverte */
     };
     
     const closeModal = () => {
@@ -23,7 +22,6 @@ const Project = ({project}) =>
         setTimeout(() => { // Attend que l'animation soit terminée avant de fermer la modale
             setIsModalOpen(false);
             setIsClosing(false);
-            document.body.classList.remove('modal-open');
         }, 300);
     };
 
@@ -36,10 +34,6 @@ const Project = ({project}) =>
                 <button onClick={(event) => openModal(event)}>
                     <img src={project.img} alt={`Mockup du projet ${project.title}`} className="mockup" />
                 </button>
-
-
-                <Modal isModalOpen={isModalOpen} onClose={closeModal} isClosing={isClosing} project={project} />
-
 
                 <motion.div className='infos-wrapper'>
 
@@ -61,6 +55,10 @@ const Project = ({project}) =>
                     </div>
 
                 </motion.div>
+
+                {isModalOpen && (
+                    <Modal isModalOpen={isModalOpen} onClose={closeModal} isClosing={isClosing} project={project} />
+                )}
 
             </div>
 
