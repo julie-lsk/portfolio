@@ -24,7 +24,7 @@ function Skills()
     <tr>
       <th>Langages</th>
       <th>Outils</th>
-      <th>Connaissances</th>
+      <th>Savoirs</th>
     </tr>
   </thead>
   <tbody>

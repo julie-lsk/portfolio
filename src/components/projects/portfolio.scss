@@ -34,7 +34,7 @@
             {
                 font-size: 50px;
             }
-    }
+        }
 
         .progressBar
         {
@@ -46,6 +46,13 @@
                 height: 8px;
             }
         }
+    }
+
+    .projects-flex
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
     }
 
     .nuage
@@ -79,6 +86,25 @@
                 50% {transform: translateX(-200px);}
                 100% {transform: translateX(0);}
             }
+        }
+
+        @media (max-width: 1600px) 
+        {
+            left: -300px;
+            animation: levitateCloud 10s ease-in-out infinite;
+
+            @keyframes levitateCloud 
+            {
+                0% {transform: translateX(0);}
+                50% {transform: translateX(-100px);}
+                100% {transform: translateX(0);}
+            }
+        }
+
+        @include tablet
+        {
+            width: 1200px;
+            left: -350px;
         }
     }
 
@@ -122,6 +148,11 @@
                 50% {transform: translateY(-30px);}
                 100% {transform: translateY(0);}
             }
+        }
+
+        @include desktop
+        {
+            bottom: 27.5%;
         }
     }
 }

@@ -93,9 +93,11 @@ function Portfolio()
 
             </div>
 
-            {projects.map((project) => (
-                <Project project={project} key={project.id} /> 
-            ))}
+            <div className='projects-flex'>
+                {projects.map((project) => (
+                    <Project project={project} key={project.id} /> 
+                ))}
+            </div>
 
             <motion.div style={nuageStyle} className="nuage"></motion.div>
             <motion.div style={avionStyle} className="avion"></motion.div>

@@ -17,7 +17,8 @@ table
 
     @include desktop 
     {
-        max-width: 800px;
+        max-width: 700px;
+        font-size: 27px;
     }
 
     tr
@@ -30,6 +31,11 @@ table
         font-size: 35px;
         display: flex;
         justify-content: center;
+
+        @include desktop 
+        {
+            font-size: 32px;
+        }
     }
 
     th, td 
@@ -40,21 +46,41 @@ table
         display: flex;
         align-items: center;
         border: 1px solid #ffffff62;
+
+        @include desktop 
+        {
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
     }
 
     td
     {
         height: 180px;
+
+        @include desktop 
+        {
+            height: 150px;
+        }
     }
     
     td img 
     {
         width: 85px;
-        max-height: 100px;
+        max-height: 95px;
         height: auto;
         margin-right: 20px;
         filter: grayscale(100%);
         cursor: pointer;
+
+        @include desktop 
+        {
+            width: 75px;
+            max-height: 85px;
+            margin: 0;
+        }
     }
 
     td img:hover
@@ -67,5 +93,10 @@ table
     #small
     {
         width: 150px;
+
+        @include desktop 
+        {
+            width: 110px;
+        }
     }
 }

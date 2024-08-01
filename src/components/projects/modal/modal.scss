@@ -1,3 +1,5 @@
+@import "../../../app.scss";
+
 .modal-overlay 
 {
   position: fixed;
@@ -16,12 +18,23 @@
     position: relative;
     background-color: white;
     border-radius: 10px;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 80%;
     overflow: auto;
     display: flex;
     flex-direction: column;
     z-index: 100000;
+
+    @media (max-width: 1600px) 
+    {
+      width: 80%;
+    }
+
+    @include desktop
+    {
+      // width: 80%;
+      // height: 70%;
+    }
 
     #modal-header
     {
@@ -76,7 +89,7 @@
         margin-bottom: 30px;
       }
 
-      p:not(#intro)
+      p:not(#intro, .commentaire)
       {
         text-align: center;
       }
@@ -96,6 +109,12 @@
         display: flex;
         gap: 100px;
         justify-content: space-evenly;
+
+        @media (max-width: 1600px) 
+        {
+          flex-direction: column;
+          gap: 20px;
+        }
 
         img
         {
@@ -120,10 +139,16 @@
       {
         font-weight: 600;
         margin-bottom: 10px;
-        text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 1600px) 
+        {
+          justify-content: flex-start;
+          margin-top: 25px;
+          text-align: justify;
+        }
 
         img
         {
@@ -134,9 +159,16 @@
   
       .commentaire
       {
-        margin-bottom: 30px;
+        margin: 15px 30px;
         text-align: center;
+
+        @media (max-width: 1600px) 
+        {
+          margin: 15px 0;
+          text-align: start;
+        }
       }
+      
 
       .github
       {

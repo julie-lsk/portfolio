@@ -68,7 +68,12 @@
 
             @include desktop
             {
-                font-size: 120px;
+                font-size: 110px;
+            }
+
+            @media (max-width: 1100px)
+            {
+                font-size: 100px;
             }
         }
 
@@ -103,7 +108,14 @@
 
             @include desktop
             {
-                font-size: 100px;
+                font-size: 95px;
+                padding: 10px 45px 0px 45px;
+            }
+
+            @media (max-width: 1100px)
+            {
+                font-size: 85px;
+                padding: 10px 50px 0px 50px;
             }
         }
 
@@ -132,7 +144,12 @@
 
             @include desktop
             {
-                font-size: 60px;
+                font-size: 55px;
+            }
+
+            @media (max-width: 1100px)
+            {
+                font-size: 45px;
             }
         }
 

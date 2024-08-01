@@ -17,14 +17,12 @@
 
     .wrapper
     {
-        position: relative;
         display: flex;
         align-items: center;
         max-width: 60%;
         height: 100%;
         margin: auto;
         gap: 50px;
-        z-index: 1;
 
         @media (max-width: 2200px) 
         {
@@ -118,6 +116,11 @@
                         {
                             width: 80px;
                         }
+
+                        @include desktop
+                        {
+                            width: 100px;
+                        }
                     }
                 }
             }
@@ -146,6 +149,11 @@
                     margin-left: 5px;
                     opacity: 70%;
                     animation: moveLeftRight 1.5s ease-in-out infinite;
+
+                    @include desktop
+                    {
+                        display: none;
+                    }
                 }
     
                 @keyframes moveLeftRight 
