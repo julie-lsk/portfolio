@@ -8,14 +8,14 @@ import ToggleButton from './toggleButton/ToggleButton';
 const variants = 
 {
     open: {
-        clipPath: "circle(1200px at 50px 300px)",
+        clipPath: "circle(2500px at 50px 300px)",
         transition: {
             type: "spring", /* effet ressort */
             stiffness: 20, /* (20 = lent) --> rigidité : + la valeur est basse, plus l'effet ressort est souple */
         }
     },
     closed: {
-        clipPath: "circle(38.8px at 326px 73.5px)", /* créé le cercle du menu burger */
+        clipPath: "circle(39px at 326px 73.5px)", /* créé le cercle du menu burger */
         transition: {
             delay: 0.5, /* délai de transition après le clic */
             type: "spring", /* effet ressort */
