@@ -5,6 +5,7 @@ function ToggleButton({setOpen, open})
     return (
         <motion.button 
             onClick={() => setOpen(prev => !prev)}
+            className="toggle-button"
             initial={{opacity:0}}
             animate={{opacity:1, transition: {delay:1}}}
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
