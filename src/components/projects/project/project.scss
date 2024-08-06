@@ -48,6 +48,11 @@
             flex: 1; /* pour avoir la même taille que le texte d'infos */
             width: 100%;
             object-fit: cover;
+
+            @include desktop
+            {
+                margin-bottom: 20px;
+            }
         }
 
         .infos-wrapper
@@ -57,6 +62,12 @@
             justify-content: space-evenly;
             height: max-content;
             flex: 1; /* pour avoir la même taille que l'img */
+
+            @include desktop
+            {
+                flex: none;
+                gap: 50px;
+            }
 
             h4
             {

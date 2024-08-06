@@ -1,30 +1,30 @@
 import {motion} from "framer-motion";
 
 
-const variants = {
-    open: {
-        transition: {
-            staggerChildren: 0.3 /* effet cascade : chaque item enfant de la div vont apparaitre un à un tous les 0.3s */
-        }
-    },
-    closed: {
-        transition: {
-            staggerChildren: 0.05, /* effet cascade : chaque item enfant de la div vont apparaitre un à un tous les 0.05s (+ rapide) */
-            staggerDirection: -1, /* ordre de disparition des enfants inversé : dernier, avant-dernier... */
-        }
-    }
-}
+// const variants = {
+//     open: {
+//         transition: {
+//             staggerChildren: 0.3 /* effet cascade : chaque item enfant de la div vont apparaitre un à un tous les 0.3s */
+//         }
+//     },
+//     closed: {
+//         transition: {
+//             staggerChildren: 0.05, /* effet cascade : chaque item enfant de la div vont apparaitre un à un tous les 0.05s (+ rapide) */
+//             staggerDirection: -1, /* ordre de disparition des enfants inversé : dernier, avant-dernier... */
+//         }
+//     }
+// }
 
-const itemsVariants = {
-    open: {
-        y: 0, /* quand ouvert = pas de décalage */
-        opacity: 1, 
-    },
-    closed: {
-        y: 50, /* déplace les items de 50px vers le bas sur l'axe Y (par rapport à position d'origine = 0) */
-        opacity: 0,
-    }
-}
+// const itemsVariants = {
+//     open: {
+//         y: 0, /* quand ouvert = pas de décalage */
+//         opacity: 1, 
+//     },
+//     closed: {
+//         y: 50, /* déplace les items de 50px vers le bas sur l'axe Y (par rapport à position d'origine = 0) */
+//         opacity: 0,
+//     }
+// }
 
 
 function Links()
@@ -32,14 +32,15 @@ function Links()
     const items = ["Accueil", "À propos","Portfolio","Contact"];
 
     return (
-        <motion.div className="links" variants={variants}>
-            {items.map(item => (
+        <motion.div className="links" /* variants={variants} */>
+            {items.map((item, index) => (
                 <motion.a 
                     href={`#${item}`} 
                     key={item}
-                    variants={itemsVariants}
+                    style={{transitionDelay: `${index * 0.1}s`}}
+                    /* variants={itemsVariants}
                     whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.95}}>
+                    whileTap={{scale: 0.95}} */>
                     {item}
                 </motion.a>
             ))}

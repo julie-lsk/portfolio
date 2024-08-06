@@ -89,6 +89,11 @@
                 width: 70%;
             }
 
+            @include desktop
+            {
+                width: 75%;
+            }
+
             h3
             {
                 font-size: 70px;
@@ -201,6 +206,7 @@
 
         @include desktop
         {
+            left: -1000px;
             font-size: 60px;
         }
     }

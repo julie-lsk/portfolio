@@ -21,6 +21,11 @@ table
         font-size: 27px;
     }
 
+    @include tablet 
+    {
+        min-width: unset;
+    }
+
     tr
     {
         display: flex;

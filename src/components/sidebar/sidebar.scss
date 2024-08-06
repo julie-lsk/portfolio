@@ -12,8 +12,12 @@
     flex-direction: column;
     justify-content: center;
     z-index: 102;
-    transition: opacity 0.5s ease-in-out;
     overflow: hidden;
+
+    @include desktop
+    {
+        width: 250px;
+    }
 
     &.open
     {
@@ -31,8 +35,6 @@
         justify-content: center;
         gap: 20px;
         z-index: 105;
-        opacity: 0;
-        transition: 0s ease-in-out;
         pointer-events: none;
 
         a
@@ -41,19 +43,35 @@
             font-size: 40px;
             line-height: 3;
             font-weight: 500;
-
+            opacity: 0;
+            transform: translateY(-100px);
+                transition: 
+            opacity 0.6s cubic-bezier(1, 2.67, 0.83, 0.67),
+            transform 0.7s cubic-bezier(0.7, 2.67, 0.83, 0.67);
+            
             @include desktop
             {
-                font-size: 35px;
+                font-size: 30px;
             }
         }
     }
 
-    &.open .links
+    &.open .links a
     {
         pointer-events: all;
         opacity: 1;
-        transition-delay: 0.5s; /* Délai d'apparition */
+        transform: translateY(20px);
+        transition: 0.7s ease-in;
+        &:hover
+        {
+            scale: 1.2;
+            transition: none;
+        }
+        &:active
+        {
+            scale: 0.95;
+            transition: none;
+        }
     }
 
     .background-expand
@@ -65,7 +83,7 @@
         height: 70px;
         background: white;
         border-radius: 50%;
-        transition: all 0.8s cubic-bezier(0.2, 0.2, 0.63, 0.5);
+        transition: all 1s cubic-bezier(0.5, 0.2, 0.63, 0.5);
         z-index: 100;
     }
 
