@@ -80,7 +80,7 @@ function Modal({ isModalOpen, onClose, isClosing, project })
 
               <span/>
               
-              <p>Voici d'autres aperçu du site sous différents formats :</p>
+              <p>Voici d'autres aperçus du site sous différents formats :</p>
 
               <div className="mockup-wrapper">
                 {project.mockup.map((p, index) =>
