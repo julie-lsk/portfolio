@@ -148,6 +148,18 @@
                         {
                             width: 90px;
                         }
+
+                        @media (max-width: 800px)
+                        {
+                            width: 80px;
+                            min-height: 30px;
+                        }
+
+                        @include mobile
+                        {
+                            width: 70px;
+                            min-height: 25px;
+                        }
                     }
                 }
             }

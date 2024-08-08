@@ -121,3 +121,76 @@ table
         }
     }
 }
+
+.skills-list
+{
+    display: none;
+}
+
+
+
+// Si écran inférieur à 800px, le tableau devient une liste
+
+@media (max-width: 800px) 
+{
+    table 
+    {
+        display: none;
+    }
+
+    .skills-list 
+    {
+        display: block;
+        width: 80%;
+        background-color: rgba($color: #f7f4f454, $alpha: 0.2);
+        padding: 30px;
+
+        > ul 
+        {
+            list-style-type: none;
+            padding: 0;
+
+            > li 
+            {
+                margin-bottom: 30px;
+
+                h4 
+                {
+                    font-size: 33px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #ffffff62;
+                    padding-bottom: 5px;
+                }
+
+                ul 
+                {
+                    list-style-type: none;
+                    padding: 0;
+
+                    li 
+                    {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 0 20px 25px;
+                        font-size: 25px;
+
+                        img 
+                        {
+                            width: 50px;
+                            height: auto;
+                            max-height: 55px;
+                            filter: none;
+
+                            &.small 
+                            {
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

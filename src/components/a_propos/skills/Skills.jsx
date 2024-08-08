@@ -19,6 +19,7 @@ import gimp from "../../../utils/assets/langages/gimp.webp";
 function Skills()
 {
   return (
+    <>
     <table>
 
       <thead>
@@ -63,6 +64,54 @@ function Skills()
       </tbody>
       
     </table>
+
+    <div className="skills-list">
+      <ul>
+
+        <li>
+          <h4>Langages</h4>
+
+          <ul>
+            <li>HTML - CSS - JavaScript <img src={big3} alt="JavaScript - HTML - CSS" /></li>
+            <li>SCSS <img src={sass} alt="SASS - SCSS" /></li>
+            <li>React <img src={react} alt="React" /></li>
+            <li>Node.js <img src={nodeJS} alt="Node.js" className="small" /></li>
+            <li>MongoDB <img src={mongoDB} alt="Mongo DB" className="small" /></li>
+            <li>ExpressJS <img src={expressJS} alt="Express.js" className="small" /></li>
+          </ul>
+
+        </li>
+
+        <li>
+          <h4>Outils</h4>
+
+          <ul>
+            <li>VS Code <img src={vscode} alt="VS Code" /></li>
+            <li>Git <img src={git} alt="git - outil de versioning" /></li>
+            <li>GitHub <img src={github} alt="GitHub" /></li>
+            <li>Figma <img src={figma} alt="Figma" /></li>
+            <li>GIMP <img src={gimp} alt="GIMP" /></li>
+            <li>Framer Motion <img src={framerMotion} alt="Framer-motion" /></li>
+          </ul>
+
+        </li>
+
+        <li>
+          <h4>Savoirs</h4>
+
+          <ul>
+            <li>Méthode Agile/Scrum</li>
+            <li>Responsive Design</li>
+            <li>SEO</li>
+            <li>Optimisation des performances</li>
+            <li>REST API</li>
+            <li>Intégration de maquette</li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+    </>
   )
 };
 

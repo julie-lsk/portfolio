@@ -111,6 +111,16 @@
         {
             left: -450px;
         }
+
+        @media (max-width: 800px)
+        {
+            left: -550px;
+        }
+
+        @media (max-width: 800px)
+        {
+            left: -650px;
+        }
     }
 
     .avion
@@ -158,6 +168,12 @@
         @include desktop
         {
             bottom: 27.5%;
+        }
+
+        @media (max-width: 800px)
+        {
+            width: 400px;
+            height: 300px;
         }
     }
 }

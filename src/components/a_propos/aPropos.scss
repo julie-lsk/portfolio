@@ -209,7 +209,7 @@
         background-repeat: no-repeat;
         background-position: bottom;
         width: 1500px;
-        height: 1000px;
+        height: 600px;
         position: absolute;
         bottom: 200px;
         z-index: 0;
@@ -233,7 +233,6 @@
         @include desktop
         {
             left: -1000px;
-            font-size: 60px;
         }
 
         @media (max-width: 900px)
@@ -265,6 +264,11 @@
         @media (max-width: 900px)
         {
             right: 300px;
+        }
+
+        @media (max-width: 800px)
+        {
+            right: 200px;
         }
     }
 
@@ -324,6 +328,11 @@
             width: 13%;
             height: 13%;
             top: -300px;
+        }
+
+        @media (max-width: 1000px)
+        {
+            width: 18%;
         }
     }
 }
