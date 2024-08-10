@@ -53,10 +53,20 @@
           top: 30px;
           right: 30px;
         }
+
+        @media (max-width: 600px)
+        {
+          right: 25px;
+        }
     
         img
         {
           width: 40px;
+
+          @media (max-width: 600px)
+          {
+            width: 35px;
+          }
         }
     
         img:hover
@@ -87,6 +97,11 @@
         line-height: 35px;
       }
 
+      @media (max-width: 500px) 
+      {
+        font-size: 21px;
+      }
+
       h4
       {
         padding-bottom: 30px;
@@ -97,6 +112,11 @@
         {
           font-size: 30px;
           margin-right: 75px;
+        }
+
+        @media (max-width: 500px) 
+        {
+          font-size: 25px;
         }
       }
 
@@ -135,6 +155,11 @@
         img
         {
           width: 35px;
+
+          @media (max-width: 500px) 
+          {
+            width: 30px;
+          }
         }
 
         ul
@@ -166,10 +191,20 @@
           text-align: justify;
         }
 
+        @media (max-width: 500px) 
+        {
+          align-items: start;
+        }
+
         img
         {
           width: 40px;
           margin-right: 10px;
+
+          @media (max-width: 500px) 
+          {
+            width: 30px;
+          }
         }
       }
   
@@ -197,6 +232,11 @@
           min-width: 90px;
           height: auto;
           margin-top: 20px;
+
+          @media (max-width: 600px) 
+          {
+            min-width: 70px;
+          }
         }
   
         .lien-github:hover

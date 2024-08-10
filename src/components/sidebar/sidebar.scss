@@ -13,10 +13,21 @@
     justify-content: center;
     z-index: 102;
     overflow: hidden;
+    pointer-events: none;
 
     @include desktop
     {
         width: 250px;
+    }
+
+    @include mobile
+    {
+        width: 200px;
+    }
+
+    @media (max-width: 400px) 
+    {
+        width: 150px;
     }
 
     &.open
@@ -53,6 +64,16 @@
             {
                 font-size: 30px;
             }
+
+            @include mobile
+            {
+                font-size: 25px;
+            }
+
+            @media (max-width: 400px) 
+            {
+                font-size: 22px;
+            }
         }
     }
 
@@ -85,6 +106,12 @@
         border-radius: 50%;
         transition: all 1s cubic-bezier(0.5, 0.2, 0.63, 0.5);
         z-index: 100;
+
+        @media (max-width: 750px)
+        {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &.open
@@ -112,8 +139,23 @@
     cursor: pointer;
     z-index: 104;
 
+    @media (max-width: 750px)
+    {
+        width: 60px;
+        height: 60px;
+    }
+
     svg
     {
         opacity: 70%;
+        width: 23px;
+        height: 23px;
+
+        @media (max-width: 750px)
+        {
+            width: 21px;
+            height: 21px;
+            margin-top: 1px;
+        }
     }
 }

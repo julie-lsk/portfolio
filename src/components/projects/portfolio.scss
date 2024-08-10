@@ -24,6 +24,11 @@
             padding: 100px 50px 0px 50px;
         }
 
+        @media (max-width: 400px) 
+        {
+            padding: 115px 30px 0px;
+        }
+
         h3
         {
             font-size: 70px;
@@ -33,6 +38,21 @@
             @media (max-width: 1600px) 
             {
                 font-size: 50px;
+            }
+
+            @media (max-width: 750px)
+            {
+                font-size: 38px;
+            }
+
+            @media (max-width: 350px) 
+            {
+                font-size: 33px;
+            }
+
+            @media (max-width: 400px) 
+            {
+                font-size: 33px;
             }
         }
 
@@ -45,6 +65,11 @@
             {
                 height: 8px;
             }
+
+            @media (max-width: 400px) 
+            {
+                height: 6px;
+            }
         }
     }
 
@@ -53,6 +78,11 @@
         display: flex;
         flex-direction: column;
         gap: 150px;
+
+        @include mobile
+        {
+            gap: 80px;
+        }
     }
 
     .nuage
@@ -121,6 +151,32 @@
         {
             left: -650px;
         }
+
+        @media (max-width: 610px)
+        {
+            left: -730px;
+            animation: none;
+        }
+
+        @media (max-width: 550px) 
+        {
+            left: -800px;
+        }
+
+        @media (max-width: 500px) 
+        {
+            left: -830px;
+        }
+
+        @media (max-width: 450px) 
+        {
+            left: -900px;
+        }
+
+        @media (max-width: 400px) 
+        {
+            left: -960px;
+        }
     }
 
     .avion
@@ -174,6 +230,31 @@
         {
             width: 400px;
             height: 300px;
+        }
+
+        @media (max-width: 550px) 
+        {
+            width: 300px;
+            height: 200px;
+            bottom: 30%;
+            left: 25%;
+        }
+
+        @media (max-width: 450px) 
+        {
+            left: 10%;
+        }
+
+        @media (max-width: 400px) 
+        {
+            left: 0%;
+        }
+
+        @media (max-width: 400px) 
+        {
+            left: 5%;
+            width: 240px;
+            height: 150px;
         }
     }
 }
