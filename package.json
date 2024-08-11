@@ -1,8 +1,7 @@
 {
   "name": "portfolio_jl",
-  "homepage": "julie-lsk.github.io/portfolio_jl",
-  "predeploy": "npm run build",
-  "private": true,
+  "homepage": "https://julie-lsk.github.io/portfolio_jl",
+  "private": false,
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,6 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "version": "0.1.0"
   },
