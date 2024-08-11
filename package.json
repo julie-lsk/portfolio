@@ -1,6 +1,6 @@
 {
   "name": "portfolio_jl",
-  "homepage": "julie-lsk.github.io",
+  "homepage": "julie-lsk.github.io/portfolio_jl",
   "predeploy": "npm run build",
   "private": true,
   "dependencies": {
