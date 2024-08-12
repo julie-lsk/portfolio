@@ -1,6 +1,6 @@
 {
   "name": "portfolio_jl",
-  "homepage": "https://julie-lsk.github.io/portfolio_jl/",
+  "homepage": "https://julie-lsk.github.io/portfolio/",
   "private": false,
   "dependencies": {
     "@formspree/react": "^2.5.1",
